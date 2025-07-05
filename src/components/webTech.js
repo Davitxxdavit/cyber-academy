@@ -20,6 +20,11 @@ function App() {
   const [arrowDown1, setArrowDown1] = useState(false);
   const [arrowDown2, setArrowDown2] = useState(false);
   const [arrowDown3, setArrowDown3] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+  
+    const clickAboutUs = () => {
+      return setIsClicked(!isClicked);
+    }
 
 
 
@@ -91,9 +96,41 @@ function App() {
       <div id="mySidebar2" className={styles.sidebar2} style={{ width: sidebarOpen ? '250px' : '0' }}>
         <button className={styles.closebtn} onClick={closeNav}>☰</button>
         <Link to="/">მთავარი</Link>
-        <Link to="/gallery">გალერეა</Link>
+         <Link to="/gallery">კარიერა</Link>
         <Link to="/mentors">გუნდი</Link>
-        <Link to="/partners">პარტნიორები</Link>
+        <div className={styles.mobileAboutUs}>
+                           <p onClick={clickAboutUs}>ჩვენს შესახებ</p>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/mission">მისია,ხედვა,ღირებულებები</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/norms">მარეგურილებერი ნორმები</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/quality">ხარისხის უზრუნველყოფა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/strategy">სტრატეგიული განვითარების გეგმა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/plan">სამოქმედო გეგმა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+        </div>
       </div>
       
       <div id="main2" style={{ marginLeft: sidebarOpen ? '250px' : '0' }}>
@@ -112,28 +149,34 @@ function App() {
           <button className={styles["glow-on-hover"]} type="button">მართვა</button>
         </Link>
         <Link to="/gallery">
-          <button className={styles["glow-on-hover"]} type="button">გალერეა</button>
+          <button className={styles["glow-on-hover"]} type="button">კარიერა</button>
         </Link>
         <Link to="/mentors">
-          <button className={styles["glow-on-hover"]} type="button">მენტორები</button>
+          <button className={styles["glow-on-hover"]} type="button">გუნდი</button>
         </Link>
-        <Link to="/partners">
-          <button className={styles["glow-on-hover"]} type="button">პარტნიორები</button>
-        </Link>
+        <div className={styles.aboutUs}>
+                           <p >ჩვენს შესახებ</p>
+                           <Link className={styles.linkDisplay} to="/mission">მისია,ხედვა,ღირებულებები</Link>
+                           <Link className={styles.linkDisplay} to="/norms">მარეგურილებერი ნორმები</Link>
+                           <Link className={styles.linkDisplay} to="/quality">ხარისხის უზრუნველყოფა</Link>
+                           <Link className={styles.linkDisplay} to="/strategy">სტრატეგიული განვითარების გეგმა</Link>
+                           <Link className={styles.linkDisplay} to="/plan">სამოქმედო გეგმა</Link>
+                           <Link className={styles.linkDisplay} to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+                        </div>
       </div>
 
       <div className={styles.mainEdited}>
         <div className={styles.mainInnerEdited}>
-            <motion.div
+           <motion.div
+          
               initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
                 duration: 0.4,
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
             }}
-            
              className={styles.leftFirst}>
-              <img src={courseImage} alt='#' />
+             <img src={courseImage} alt='#' />
              </motion.div>
             <div className={styles.rightFirst}>
               <ReactTyped className={styles.title}

@@ -1,48 +1,38 @@
 import React, { useState } from 'react';
 import styles from "./curses.module.css";
-import { Link } from 'react-router-dom';
-import courseImage from "../asets/course-img1.jpeg"; // Adjust the path as needed
-import syllabusPdf from "../asets/silabus-rast.docx"; // Make sure you have this PDF file in your assets
-import { motion } from 'motion/react';
 import { ReactTyped } from 'react-typed';
+import { Link } from 'react-router-dom';
+import calendar from '../asets/calendar.png'; // Adjust the path as needed
+import syllabusPdf from "../asets/silabus-web.docx"; // Make sure you have this PDF file in your assets
 import lari from '../asets/lari.png';
-import calendar from '../asets/calendar.png';
-import rightArrow from '../asets/right-arrow-svgrepo-com.svg';
 import up from '../asets/up.svg';
 import down from '../asets/down.svg';
-import mentor from '../asets/mentors3.jpeg';
-
-
-
-
-
-function App() {
+import kaxi from '../asets/kaxi.jpg';
+import { motion } from 'motion/react';
+import rightArrow from '../asets/right-arrow-svgrepo-com.svg';
+import courseImage from '../asets/managment.jpg';
+function Managment() {
   const [miniSidebar, setMiniSidebar] = useState(false);
   const [micVisible, setMicVisible] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [quantity, setQuantity] = useState(1);
-const [arrowDown, setArrowDown] = useState(false);
+  // const [quantity, setQuantity] = useState(1);
+  const [arrowDown, setArrowDown] = useState(false);
   const [arrowDown1, setArrowDown1] = useState(false);
   const [arrowDown2, setArrowDown2] = useState(false);
   const [arrowDown3, setArrowDown3] = useState(false);
-const [arrowDown4, setArrowDown4] = useState(false);
-const [arrowDown5, setArrowDown5] = useState(false);
-const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
   
     const clickAboutUs = () => {
       return setIsClicked(!isClicked);
     }
 
+
+
+
   const collapse = () => {
     setArrowDown(!arrowDown);
   }
 
-    const collapse4 = () => {
-    setArrowDown4(!arrowDown4);
-  }
-     const collapse5 = () => {
-    setArrowDown5(!arrowDown5);
-  }
   const collapse1 = () => {
     setArrowDown1(!arrowDown1);
   }
@@ -75,21 +65,21 @@ const [isClicked, setIsClicked] = useState(false);
     setSidebarOpen(false);
   };
 
-  const incrementQuantity = () => {
-    setQuantity(prevQuantity => prevQuantity + 1);
-  };
+  // const incrementQuantity = () => {
+  //   setQuantity(prevQuantity => prevQuantity + 1);
+  // };
 
-  const decrementQuantity = () => {
-    if (quantity > 1) {
-      setQuantity(prevQuantity => prevQuantity - 1);
-    }
-  };
+  // const decrementQuantity = () => {
+  //   if (quantity > 1) {
+  //     setQuantity(prevQuantity => prevQuantity - 1);
+  //   }
+  // };
 
   const handleDownloadSyllabus = () => {
     // Create a temporary anchor element
     const link = document.createElement('a');
     link.href = syllabusPdf;
-    link.download = 'Algo_Syllabus.docx'; // Ensure the correct file format
+    link.download = 'Web_Syllabus.docx'; // Ensure the correct file format
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -175,10 +165,9 @@ const [isClicked, setIsClicked] = useState(false);
                         </div>
       </div>
 
-     
-          <div className={styles.mainEdited}>
+      <div className={styles.mainEdited}>
         <div className={styles.mainInnerEdited}>
-            <motion.div
+           <motion.div
           
               initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -193,8 +182,8 @@ const [isClicked, setIsClicked] = useState(false);
               <ReactTyped className={styles.title}
               
               strings={[
-                'პროგრამირების საფუძვლები და ალგორითმები',
-                'პროგრამირების საფუძვლები და ალგორითმები'
+                'Microsoft Office Suite',
+                'Microsoft Office Suite'
                 ]}
                 typeSpeed={90}
                 backSpeed={100}
@@ -202,21 +191,19 @@ const [isClicked, setIsClicked] = useState(false);
               loop
               />
               {/* <h1>ვებ ტექნოლოგიები</h1> */}
-              <p>
-                არ გამოტოვო შესაძლებლობა მარტივად შეისწავლო დაპროგრამების საფუძვლები.
-               ჩვენ გთავაზობთ უნიკალურ საშუალებას მარტივად დაეუფლოთ დაპროგრამებისათვის აუცილებელ უნარ-ჩვევებს.
-                გსურთ შეისწავლოთ დღევანდელობის ყველაზე მოთხოვნადი საოფისე პროგრამები? მაშინ შემოგვიერთდით.
-                მიმდინარე კურსის ფარგლებში თქვენ შეისწავლით საოფისე პროგრამებს, გაეცნობით მათ რეალურ შესაძლებლობებს და შეძლებთ გამოიყენოთ ის ნებისმიერ საქმეში.
+              <p>პროექტის დაგეგმვა და განხორციელება; პროექტის მონიტორინგი და შეფასება; პროექტების მართვის ინფორმაციული სისტემები- Basecamp, trello, Zoho Projects, Wrike ან სხვა,კიბერ აკადემია გთავაზობთ შესაძლებლობას შეისწავლოთ დღეისთვის სწრაფად განვითარებადი დარგი ვებ გვერდების.
+                  თქვენ აითვისებთ საიტის შექმნის და სტილების მართვის ტექნოლოგიას. შეძლებთ შექმნათ საკუთარი დიზაინის ნებისმიერი ტიპის ვებ გვერდი.
               </p>
 
                 <hr/>
 
               <ul>
-                <li>კურსი მოიცავს რამდენიმე მიმართულებას:</li>   {/* სათაური  */}
-                <li>ალგორითმები</li>
-                <li>მონაცემთა სტრუქტურები</li>
-                <li>დაპროგრამების საფუძვლები C++-ის ბაზაზე</li>
-                <li>C++-ის საშუალებით სასწავლო და მინი პროექტების შექმნა.</li>
+                <li>კურსი მოიცავს რამდენიმე მიმართულებას:</li>
+                <li>HTML+CSS – WEB გვერდების შექმნა და სტილების მართვა</li>
+                <li>JavaScript – სცენარული დაპროგრამების ენა</li>
+                <li>Hosting/FTP – სერვერთან მუშაობა</li>
+                <li>გრაფიკულ ობიექტებთან მუშაობა</li>
+                <li>კონტენტის მართვის სისტემები WordPress-ის ბაზაზე</li>
                 <li>დარგობრივი ინგლისური ენა</li>
               </ul>
             </div>
@@ -250,42 +237,45 @@ const [isClicked, setIsClicked] = useState(false);
         <div className={styles.secondSection}>
           <div className={styles.mentor}>
             <h2>მენტორი</h2>
-            <img alt='#' src={mentor} />
-            <span>ზურაბ მესხიძე</span>
+            <img alt='#' src={kaxi} />
+            <span>კახი კახიძე</span>
             <p>ვებ დეველოპერი</p>
           </div>
           <div className={styles.syllabusContainer}>
             <h2 className={styles.syllabusH2}>სილაბუსი</h2>
             <div>
               <div className={styles.syllabusContainerInner} onClick={collapse}>
-              <span className={styles.listTitle}>თემატიკა I</span> 
+              <span className={styles.listTitle}>შესავალი და HTML საფუძვლები</span> 
               <img alt='#' src={arrowDown ? up : down} />
               </div>
               <ul style={{
                 display: arrowDown ? 'block' : 'none',
               }}>
-                <li>ვექტორული რედაქტორის ინტერფეისის გაცნობა</li>
-                <li>დოკუმენტის პარამეტრების განხილვა</li>
-                <li>არსებული დოკუმენტის რედაქტირება</li>
-                <li>არსებული დოკუმენტის შენახვა/ფაილის ფორმატები</li>
-                <li>პირველი შედეგის შეფასება</li>
+                <li>ვებ განვითარების მიმოხილვა</li>
+                <li>HTML-ის შესავალი</li>
+                <li>HTML დოკუმენტის სტრუქტურა</li>
+                <li>HTML ელემენტები და ტეგები</li>
+                <li>HTML ფორმები და შეყვანა</li>
+                <li>პროექტი: მარტივი ვებ გვერდის აგება</li>
               </ul>
               
             </div>
 
             <div>
               <div className={styles.syllabusContainerInner} onClick={collapse1}>
-              <span className={styles.listTitle}>თემატიკა II</span> 
+              <span className={styles.listTitle}>CSS საფუძვლები</span> 
               <img alt='#' src={arrowDown1 ? up : down} />
               </div>
               <ul style={{
                 display: arrowDown1 ? 'block' : 'none',
               }}>
-                <li>ვექტორული ობიექტების გეომეტრიულ ფიგურებთან მუშაობა</li>
-                <li>ფუნჯების ტიპების გამოყენება</li>
-                <li>სიმბოლოებთან მუშაობა</li>
-                <li>ტექსტებთან მუშაობა</li>
-                <li>მეორე შედეგის შეფასება</li>
+                <li>CSS-ის შესავალი</li>
+                <li>CSS სელექტორები და თვისებები</li>
+                <li>ყუთის მოდელი და განლაგება</li>
+                <li>საპასუხო დიზაინის საფუძვლები</li>
+                <li>Flexbox და Grid Layout</li>
+                <li>CSS გადასვლები და ანიმაციები</li>
+                <li>პროექტი: ვებ გვერდის სტილისტიკა</li>
               </ul>
               
             </div>
@@ -293,68 +283,40 @@ const [isClicked, setIsClicked] = useState(false);
 
             <div>
               <div className={styles.syllabusContainerInner} onClick={collapse2}>
-              <span className={styles.listTitle}>თემატიკაIII</span> 
+              <span className={styles.listTitle}>JavaScript Essentials </span> 
               <img alt='#' src={arrowDown2 ? up : down} />
               </div>
               <ul style={{
                 display: arrowDown2 ? 'block' : 'none',
               }}>
-                <li>ვექტორული ობიექტების ტრანსფორმაციის გაცნობა</li>
-                <li>დეფორმაციის ხელსაწყოების გამოყენება</li>
-                <li>ხელსაწყოების სახეების გამოყენება</li>
-                <li>ვექტორული ობიექტების სწორების რეჟიმები</li>
-                <li>Pathfinder-ის ლოგიკური ოპერაციების განხილვა</li>
-                <li>მესამე შედეგის შეფასება</li>
+                <li>JavaScript-ის შესავალი</li>
+                <li>ცვლადები და მონაცემთა ტიპები</li>
+                <li>ოპერატორები და გამონათქვამები</li>
+                <li>კონტროლის ნაკადი და პირობითი განცხადებები</li>
+                <li>მარყუჟები და გამეორება</li>
+                <li>ფუნქციები და სფერო</li>
+                <li>მასივები და ობიექტები</li>
+                <li>DOM მანიპულირების საფუძვლები</li>
+                <li>ღონისძიებები და ღონისძიებები</li>
+                <li>პროექტი: ვებ გვერდზე ინტერაქტიულობის დამატება</li>
               </ul>
               
             </div>
 
             <div>
               <div className={styles.syllabusContainerInner} onClick={collapse3}>
-              <span className={styles.listTitle}>თემატიკაIV</span> 
+              <span className={styles.listTitle}>გაფართოებული CSS და JavaScript  </span> 
               <img alt='#' src={arrowDown3 ? up : down} />
               </div>
               <ul style={{
                 display: arrowDown3 ? 'block' : 'none',
               }}>
-                <li>დამატებითი ეფექტების შექმნა და გამოყენება</li>
-                <li>გადადინების ეფექტი სამგანზომილებიანი ეფექტი</li>
-                <li>გრაფიკული ეფექტების გამოყენება</li>
-                <li>გრაფიკული სტილების გამოყენება</li>
-                <li>მეოთხე შედეგის შეფასება</li>
-              </ul>
-              
-            </div>
-
-              <div>
-              <div className={styles.syllabusContainerInner} onClick={collapse4}>
-              <span className={styles.listTitle}>თემატიკაV</span> 
-              <img alt='#' src={arrowDown4 ? up : down} />
-              </div>
-              <ul style={{
-                display: arrowDown4 ? 'block' : 'none',
-              }}>
-                <li>რასტრული გამოსახულების ტრასირება</li>
-                <li>ტრასირების სახეობები და პარამეტრები</li>
-                <li>მეხუთე შედეგის შეფასება</li>
-              </ul>
-              
-            </div>
-
-            
-            <div>
-              <div className={styles.syllabusContainerInner} onClick={collapse5}>
-              <span className={styles.listTitle}>თემატიკაVI</span> 
-              <img alt='#' src={arrowDown5 ? up : down} />
-              </div>
-              <ul style={{
-                display: arrowDown5 ? 'block' : 'none',
-              }}>
-                <li>დოკუმენტის მომზადება დასაბეჭდად</li>
-                <li>დოკუმენტის ჭრის ხაზების გაცნობა</li>
-                <li>დოკუმენტში ფერთა მოდელების განხილვა</li>
-                <li>დოკუმენტში ფონტების კონვერტაცია</li>
-                <li>კომბინირებული დავალების შესრულება</li>
+                <li>გაფართოებული CSS ტექნიკა</li>
+                <li>CSS წინასწარი პროცესორები (მაგ. SASS)</li>
+                <li>ასინქრონული JavaScript და AJAX</li>
+                <li>შეცდომების მართვა და გამართვა</li>
+                <li>API და Fetch</li>
+                <li>პროექტი: ინტერაქტიული ვებ აპლიკაციის აგება</li>
               </ul>
               
             </div>
@@ -363,8 +325,13 @@ const [isClicked, setIsClicked] = useState(false);
             <button
             onClick={handleDownloadSyllabus}
              className={styles.sylBTN}>სილაბუსი <img src={rightArrow}  alt='#' /><img className={styles.displayNone} src={rightArrow}  alt='#' /></button>
-          </div> 
+          </div>
+
+          
         </div>
+
+
+
       </div>
 
 
@@ -372,7 +339,7 @@ const [isClicked, setIsClicked] = useState(false);
 
 
 
-
+{/* --------------------------------- */}
 
 
       <div
@@ -466,4 +433,4 @@ const [isClicked, setIsClicked] = useState(false);
   );
 }
 
-export default App;
+export default Managment;

@@ -13,6 +13,11 @@ const CyberAcademy = () => {
   const [miniSidebar, setMiniSidebar] = useState(false);
   const [micVisible, setMicVisible] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+   const [isClicked, setIsClicked] = useState(false);
+                  
+                    const clickAboutUs = () => {
+                      return setIsClicked(!isClicked);
+                    }
 
   const handleMouseEnter = () => {
     setMiniSidebar(true);
@@ -45,6 +50,9 @@ const CyberAcademy = () => {
     { id: 4, image: 'picer-container-swiper4', text: 'ალგორითმები', link: '/algo' },
     { id: 5, image: 'picer-container-swiper5', text: 'ფოტოგრაფია, ფოტოგრაფია მაკრეტინგში', link: '/photograph' },
     { id: 6, image: 'picer-container-swiper6', text: 'საოფისე პროგრამული უზრუნველყოფა', link: '/office' },
+    { id: 7, image: 'picer-container-swiper7', text: 'Microsoft Office Suite-ის გამოყენება', link: '/suite' },
+    { id: 8, image: 'picer-container-swiper8', text: 'Google Workspace-ის გამოყენება', link: '/office' },
+    { id: 9, image: 'picer-container-swiper9', text: 'პროექტის მართვის საბაზისო პრინციპები', link: '/office' },
   ];
 
   const gallery = [
@@ -104,7 +112,7 @@ const CyberAcademy = () => {
             id="header"
             style={{ marginLeft: miniSidebar ? '20px' : '190px' }}
           >
-            ჩვენ შესახებ
+            ჩვენს შესახებ
           </div>
           <div className="fix-it-container5">
             <div 
@@ -174,7 +182,7 @@ const CyberAcademy = () => {
 
           <Swiper
             className="mySwiper"
-            spaceBetween={30}
+            spaceBetween={0}
             centeredSlides={true}
             direction="vertical"
             slidesPerView={2.5}
@@ -187,11 +195,11 @@ const CyberAcademy = () => {
             loop={true}
             modules={[Autoplay, Pagination]}
             breakpoints={{
-              1300: { slidesPerView: 3.5, spaceBetween: 30 },
-              1250: { slidesPerView: 3, spaceBetween: 30 },
-              1100: { slidesPerView: 3.1, spaceBetween: 30 },
-              1030: { slidesPerView: 3.1, spaceBetween: 30 },
-              900: { slidesPerView: 4.5, spaceBetween: 30 },
+              1300: { slidesPerView: 3.5, spaceBetween: 0 },
+              1250: { slidesPerView: 3, spaceBetween: 0 },
+              1100: { slidesPerView: 3.1, spaceBetween: 0 },
+              1030: { slidesPerView: 3.1, spaceBetween: 0 },
+              900: { slidesPerView: 4.5, spaceBetween: 0 },
               
               300: { slidesPerView: 5.4, spaceBetween: 0 },
             }}
@@ -199,9 +207,11 @@ const CyberAcademy = () => {
             {courses.map((course) => (
               <SwiperSlide key={course.id}>
                 <Link className='linkkk' to={course.link}>
-                  <div className="box-container-swiper">
-                    <div className={course.image}></div>
-                    <div className="texter-container-swiper">{course.text}</div>
+                 
+                  <div className="box-container-swiper-edited">
+                    <div className={course.image}>
+                      <div className="texter-container-swiper-edited">{course.text}</div>
+                    </div>
                   </div>
                 </Link>
               </SwiperSlide>
@@ -211,11 +221,11 @@ const CyberAcademy = () => {
 
         <div className="swiper">
           <Link to="/gallery">
-            <button className="glow-on-hover" type="button">გალერეა</button>
+            <button className="glow-on-hover" type="button">კარიერა</button>
           </Link>
           <Swiper
             className="mySwiper2"
-            spaceBetween={30}
+            spaceBetween={0}
             centeredSlides={true}
             direction="vertical"
             slidesPerView={2.5}
@@ -228,20 +238,21 @@ const CyberAcademy = () => {
             loop={true}
             modules={[Autoplay, Pagination]}
             breakpoints={{
-              1300: { slidesPerView: 3.5, spaceBetween: 300 },
-              1250: { slidesPerView: 3, spaceBetween: 30 },
+              1300: { slidesPerView: 3.5, spaceBetween: 0 },
+              1250: { slidesPerView: 3, spaceBetween: 0 },
               1100: { slidesPerView: 3.1, spaceBetween: 0 },
               1030: { slidesPerView: 3.1, spaceBetween: 0 },
-              900: { slidesPerView: 4.5, spaceBetween: 350 },
+              900: { slidesPerView: 4.5, spaceBetween: 0 },
               300: { slidesPerView: 5.4, spaceBetween: 0 },
             }}
           >
             {gallery.map((item) => (
               <SwiperSlide key={item.id}>
-                <Link to={item.link}>
-                  <div className="box-container-swiper">
-                    <div className={item.image}></div>
-                    <div className="texter-container-swiper">{item.text}</div>
+                <Link className='linkkk' to={item.link}>
+                  <div className="box-container-swiper-edited">
+                    <div className={item.image}>
+                      <div className="texter-container-swiper-edited">{item.text}</div>
+                    </div>
                   </div>
                 </Link>
               </SwiperSlide>
@@ -256,7 +267,7 @@ const CyberAcademy = () => {
 
           <Swiper
             className="mySwiper"
-            spaceBetween={30}
+            spaceBetween={0}
             centeredSlides={true}
             direction="vertical"
             slidesPerView={2.5}
@@ -269,20 +280,21 @@ const CyberAcademy = () => {
             loop={true}
             modules={[Autoplay, Pagination]}
             breakpoints={{
-              1300: { slidesPerView: 3.5, spaceBetween: 300 },
-              1250: { slidesPerView: 3, spaceBetween: 30 },
+              1300: { slidesPerView: 3.5, spaceBetween: 0 },
+              1250: { slidesPerView: 3, spaceBetween: 0 },
               1100: { slidesPerView: 3.1, spaceBetween: 0 },
               1030: { slidesPerView: 3.1, spaceBetween: 0 },
-              900: { slidesPerView: 4.5, spaceBetween: 350 },
+              900: { slidesPerView: 4.5, spaceBetween: 0 },
               300: { slidesPerView: 5.4, spaceBetween: 0 },
             }}
           >
             {mentors.map((mentor) => (
               <SwiperSlide className='swiper-slide' key={mentor.id}>
-                <Link to={mentor.link}>
-                  <div className="box-container-swiper">
-                    <div className={mentor.image}></div>
-                    <div className="texter-container-swiper">{mentor.text}</div>
+                <Link className='linkkk' to={mentor.link}>
+                  <div className="box-container-swiper-edited">
+                    <div className={mentor.image}>
+                      <div className="texter-container-swiper-edited">{mentor.text}</div>
+                    </div>
                   </div>
                 </Link>
               </SwiperSlide>
@@ -291,13 +303,21 @@ const CyberAcademy = () => {
         </div>
 
         <div className="swiper">
-          <Link to="/partners">
+          {/* <Link to="/partners">
             <button className="glow-on-hover" type="button">ჩვენს შესახებ</button>
-          </Link>
-
+          </Link> */}
+            <div className=' about-uss'>
+                    <p >ჩვენს შესახებ</p>
+                    <Link className='link-display' to="/mission">მისია,ხედვა,ღირებულებები</Link>
+                    <Link className='link-display' to="/norms">მარეგურილებერი ნორმები</Link>
+                    <Link className='link-display' to="/quality">ხარისხის უზრუნველყოფა</Link>
+                    <Link className='link-display' to="/strategy">სტრატეგიული განვითარების გეგმა</Link>
+                    <Link className='link-display' to="/plan">სამოქმედო გეგმა</Link>
+                    <Link className='link-display' to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+                 </div>
           <Swiper
             className="mySwiper2"
-            spaceBetween={30}
+            spaceBetween={0}
             centeredSlides={true}
             direction="vertical"
             slidesPerView={2.5}
@@ -310,20 +330,21 @@ const CyberAcademy = () => {
             loop={true}
             modules={[Autoplay, Pagination]}
             breakpoints={{
-              1300: { slidesPerView: 3.5, spaceBetween: 300 },
-              1250: { slidesPerView: 3, spaceBetween: 30 },
+              1300: { slidesPerView: 3.5, spaceBetween: 0 },
+              1250: { slidesPerView: 3, spaceBetween: 0 },
               1100: { slidesPerView: 3.1, spaceBetween: 0 },
               1030: { slidesPerView: 3.1, spaceBetween: 0 },
-              900: { slidesPerView: 4.5, spaceBetween: 350 },
+              900: { slidesPerView: 4.5, spaceBetween: 0 },
               300: { slidesPerView: 5.4, spaceBetween: 0 },
             }}
           >
             {partners.map((partner) => (
               <SwiperSlide key={partner.id}>
-                <Link to={partner.link}>
-                  <div className="box-container-swiper">
-                    <div className={partner.image}></div>
-                    <div className="texter-container-swiper">{partner.text}</div>
+                <Link className='linkkk' to={partner.link}>
+                  <div className="box-container-swiper-edited">
+                    <div className={partner.image}>
+                      <div className="texter-container-swiper-edited">{partner.text}</div>
+                    </div>
                   </div>
                 </Link>
               </SwiperSlide>
@@ -337,9 +358,41 @@ const CyberAcademy = () => {
     <a className="closebtn" onClick={closeNav}>&times;</a>
     <Link to="/" onClick={closeNav}>მთავარი</Link>
     <Link to="/courses" onClick={closeNav}>კურსები</Link>
-    <Link to="/gallery" onClick={closeNav}>გალერეა</Link>
-    <Link to="/mentors" onClick={closeNav}>მენტორები</Link>
-    <Link to="/partners" onClick={closeNav}>პარტნიორები</Link>
+    <Link to="/gallery" onClick={closeNav}>კარიერა</Link>
+    <Link to="/mentors" onClick={closeNav}>გუნდი</Link>
+    <div className='mobile-about-us'>
+                           <p onClick={clickAboutUs}>ჩვენს შესახებ</p>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className='link-display-mobile' to="/mission">მისია,ხედვა,ღირებულებები</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className='link-display-mobile' to="/norms">მარეგურილებერი ნორმები</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className='link-display-mobile' to="/quality">ხარისხის უზრუნველყოფა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className='link-display-mobile' to="/strategy">სტრატეგიული განვითარების გეგმა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className='link-display-mobile' to="/plan">სამოქმედო გეგმა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className='link-display-mobile' to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+        </div>
   </div>
 
   <div id="main2">

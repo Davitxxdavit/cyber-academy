@@ -24,6 +24,11 @@ const [arrowDown, setArrowDown] = useState(false);
   const [arrowDown3, setArrowDown3] = useState(false);
 const [arrowDown4, setArrowDown4] = useState(false);
 const [arrowDown5, setArrowDown5] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+  
+    const clickAboutUs = () => {
+      return setIsClicked(!isClicked);
+    }
 
   const collapse = () => {
     setArrowDown(!arrowDown);
@@ -98,9 +103,41 @@ const [arrowDown5, setArrowDown5] = useState(false);
       <div id="mySidebar2" className={styles.sidebar2} style={{ width: sidebarOpen ? '250px' : '0' }}>
         <button className={styles.closebtn} onClick={closeNav}>☰</button>
         <Link to="/">მთავარი</Link>
-        <Link to="/gallery">გალერეა</Link>
-        <Link to="/mentors">მენტორები</Link>
-        <Link to="/partners">პარტნიორები</Link>
+         <Link to="/gallery">კარიერა</Link>
+        <Link to="/mentors">გუნდი</Link>
+        <div className={styles.mobileAboutUs}>
+                           <p onClick={clickAboutUs}>ჩვენს შესახებ</p>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/mission">მისია,ხედვა,ღირებულებები</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/norms">მარეგურილებერი ნორმები</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/quality">ხარისხის უზრუნველყოფა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/strategy">სტრატეგიული განვითარების გეგმა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/plan">სამოქმედო გეგმა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+        </div>
       </div>
       
       <div id="main2" style={{ marginLeft: sidebarOpen ? '250px' : '0' }}>
@@ -118,15 +155,21 @@ const [arrowDown5, setArrowDown5] = useState(false);
         <Link to="/">
           <button className={styles["glow-on-hover"]} type="button">მართვა</button>
         </Link>
-        <Link to="/gallery">
-          <button className={styles["glow-on-hover"]} type="button">გალერეა</button>
+         <Link to="/gallery">
+          <button className={styles["glow-on-hover"]} type="button">კარიერა</button>
         </Link>
         <Link to="/mentors">
-          <button className={styles["glow-on-hover"]} type="button">მენტორები</button>
+          <button className={styles["glow-on-hover"]} type="button">გუნდი</button>
         </Link>
-        <Link to="/partners">
-          <button className={styles["glow-on-hover"]} type="button">პარტნიორები</button>
-        </Link>
+          <div className={styles.aboutUs}>
+                           <p >ჩვენს შესახებ</p>
+                           <Link className={styles.linkDisplay} to="/mission">მისია,ხედვა,ღირებულებები</Link>
+                           <Link className={styles.linkDisplay} to="/norms">მარეგურილებერი ნორმები</Link>
+                           <Link className={styles.linkDisplay} to="/quality">ხარისხის უზრუნველყოფა</Link>
+                           <Link className={styles.linkDisplay} to="/strategy">სტრატეგიული განვითარების გეგმა</Link>
+                           <Link className={styles.linkDisplay} to="/plan">სამოქმედო გეგმა</Link>
+                           <Link className={styles.linkDisplay} to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+                        </div>
       </div>
 
       

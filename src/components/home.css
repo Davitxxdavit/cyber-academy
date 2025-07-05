@@ -1,8 +1,7 @@
 
 :root{
-  --swiper-width: calc((100vw - 180px) / 4);
+  --swiper-width: calc((100vw - 200px) / 4);
 }
-
 
 
 html,
@@ -12,6 +11,26 @@ body {
   margin: 0px;
   background-color: #16213b;
 }
+
+.mobile-about-us{
+  color: #818181;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.mobile-about-us p{
+  padding: 8px 8px 8px 32px;
+  margin: 0;
+}
+
+
+
+.mobile-about-us .link-display-mobile{   
+   padding: 8px 8px 8px 32px;
+   color: white;
+}
+
 .glow-on-hover {
     width: 220px;
     height: 50px;
@@ -42,6 +61,7 @@ body {
     opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
+     opacity: 1;
   }
   
   .glow-on-hover:active {
@@ -50,10 +70,6 @@ body {
   
   .glow-on-hover:active:after {
     background: transparent;
-  }
-  
-  .glow-on-hover:before {
-    opacity: 1;
   }
   
   .glow-on-hover:hover{
@@ -127,7 +143,16 @@ body {
     border-radius: 15px;
   }
 
+
+
+
+
+
   @media (min-width: 1900px) and (max-width: 3000px) {
+
+    
+
+
     .box-container-swiper{
       /* scale: 1.5!important; */
       width: 500px;
@@ -136,12 +161,37 @@ body {
     }
     .glow-on-hover{
       width: 370px!important;
-      height: 60px!important;
+      height: 60px;
     }
+
+    /* .link-display{
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  
+} */
+/* 
+.about-uss{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  overflow-y: visible;
+  height: 1000px;
+}
+
+.about-uss:hover > .link-display{
+  display: flex;
+} */
 
   }
 
   @media (min-width: 3000px) and (max-width: 5000px) {
+
+
+
     .box-container-swiper{
       /* scale: 2!important; */
       margin-top: 100px!important;
@@ -188,6 +238,20 @@ body {
     height: 300px;
     border-radius: 15px; 
   }
+
+      
+ .picer-container-swiper7{
+  background-image: url(../asets/microsoftsuite.webp);
+  background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+  }
+  
   .picer-container-swiper:hover,.picer-container-swiper2:hover,.picer-container-swiper3:hover,.picer-container-swiper4:hover,.picer-container-swiper5:hover,.picer-container-swiper6:hover{
     border-radius: 15px;
   }
@@ -715,7 +779,18 @@ body {
   border-radius: 15px;
   
   }
-  
+       
+ .picer-container-swiper7{
+  background-image: url(../asets/microsoftsuite.webp);
+  background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+  }
   
   
   .picer-container-swiper:hover,.picer-container-swiper2:hover,.picer-container-swiper3:hover,.picer-container-swiper4:hover,.picer-container-swiper5:hover,.picer-container-swiper6:hover{
@@ -1111,20 +1186,13 @@ body {
     }
     .box-container-swiper{
       width: calc((100vw - 180px) / 4);
-      /* width: 320px; */
-      /* width: 20vw; */
-      /* height: 320px; */
       height: var(--swiper-width);
-      /* height: calc(var(--swiper-width) - 3vh); */
-      /* height: 33vh; */
       position: relative;
       box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
       transition: ease-in-out;
       transition-duration: 0.5s;
       border-radius: 15px;
       overflow: hidden;
-      
-      /* margin-top: 40px; */
       margin: 0;
     }
 
@@ -1141,18 +1209,1052 @@ body {
 
 
     .linkkk{
-      /* height: var(--swiper-width);
-      margin: 0;
-      padding: 0; */
+      border: 1px solid rgba(0,255,255,0.5);
+          border-radius: 20px;
+          box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
+         position: relative;
     }
   
-  
-      
-      .box-container-swiper:hover{
-      scale: 1.1;
-      
-      
+      .box-container-swiper-edited{
+          width: var(--swiper-width);
+          height: 30vh;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end; 
+          position: relative;
+          border-radius: 20px;
       }
+
+
+ .link-display{
+      color: white;
+      display: none;
+      overflow: hidden;
+    
+    }
+
+.about-uss{
+  overflow-wrap: anywhere;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.692);
+  width: 220px;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: #fff;
+  background:#16213b;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 20px 0px;
+  font-size: 20px;  
+  height: 50px;
+}
+
+.about-uss:hover > .link-display{
+  display: flex;
+}
+
+    .about-uss:hover{
+        height: fit-content;
+    }
+    
+
+      .texter-container-swiper-edited{
+        color: rgb(255, 255, 255);
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+     
+/* hover animation on courses images at main page  */
+      
+
+    .picer-container-swiper::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* --- */
+
+
+    .picer-container-swiper2::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper2:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper2:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ----- */
+
+    .picer-container-swiper3::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper3:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper3:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ----- */
+
+
+    .picer-container-swiper4::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper4:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper4:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ---- */
+
+
+    .picer-container-swiper5::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper5:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper5:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ----- */
+
+
+    .picer-container-swiper6::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper6:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper6:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ---------- */
+
+    .picer-container-swiper7::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper7:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper7:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ----------- */
+    .picer-container-swiper8::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper8:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper8:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+
+/* ---------- */
+
+
+
+    .picer-container-swiper9::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper9:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper9:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ------------ */
+
+
+    .picer-container-swiper-gallery-1::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-1:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-1:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ---------- */
+
+
+    .picer-container-swiper-gallery-2::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-2:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-2:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ----- */
+
+
+    .picer-container-swiper-gallery-3::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-3:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-3:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+
+/* ------- */
+
+
+    .picer-container-swiper-gallery-4::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-4:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-4:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ------ */
+
+
+    .picer-container-swiper-gallery-5::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-5:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-5:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ------ */
+
+
+    .picer-container-swiper-gallery-6::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-6:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-6:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* --------------- */
+
+
+    .picer-container-swiper-gallery-7::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-7:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-7:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ------- */
+
+
+    .picer-container-swiper-mentors::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+
+/* ------ */
+
+
+    .picer-container-swiper-mentors2::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors2:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors2:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+
+/* ----- */
+
+
+    .picer-container-swiper-mentors3::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors3:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors3:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ----- */
+
+
+    .picer-container-swiper-mentors4::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors4:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors4:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ------------ */
+
+
+    .picer-container-swiper-mentors5::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors5:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors5:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* --- */
+
+
+    .picer-container-swiper-mentors6::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors6:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors6:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+  
+/* ---- */
+
+
+    .picer-container-swiper-mentors7::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors7:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors7:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ---- */
+
+
+    .picer-container-swiper-partneors::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ---- */
+
+
+    .picer-container-swiper-partneors2::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors2:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors2:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ---- */
+
+
+    .picer-container-swiper-partneors3::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors3:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors3:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* --- */
+
+
+
+    .picer-container-swiper-partneors4::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors4:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors4:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ---- */
+
+
+    .picer-container-swiper-partneors5::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors5:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors5:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+/* --- */
+
+
+
+    .picer-container-swiper-partneors6::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors6:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors6:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ------ */
+
+
+
+    .picer-container-swiper-partneors7::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors7:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors7:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+  
+      /* ---- end hover animation ----  */
+      
       .picer-container-swiper{
       background-image: url(../asets/cur-1.jpg);
       background-size: cover;
@@ -1160,8 +2262,10 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
-      
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      animation: 0.3s ease-in-out;
       }
       .picer-container-swiper2{
       background-image: url(../asets/course-2.jpg);
@@ -1170,8 +2274,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
-      
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper3{
@@ -1181,7 +2286,10 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      /* border-radius: 15px; */
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       
       }
       .picer-container-swiper4{
@@ -1191,8 +2299,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
-      
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper5{
       background-image: url(../asets/course-img2.jpeg);
@@ -1201,8 +2310,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
-      
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper6{
@@ -1212,11 +2322,52 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       
       }
+
       
+ .picer-container-swiper7{
+  background-image: url(../asets/microsoftsuite.webp);
+  background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+  }
       
+        
+ .picer-container-swiper8{
+  background-image: url(../asets/google-workspace.jpg);
+  background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+  }
+      
+
+  .picer-container-swiper9{
+  background-image: url(../asets/managment.jpg);
+  background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+  }
+      
+    
       
       .picer-container-swiper:hover,.picer-container-swiper2:hover,.picer-container-swiper3:hover,.picer-container-swiper4:hover,.picer-container-swiper5:hover,.picer-container-swiper6:hover{
       border-radius: 15px;
@@ -1228,7 +2379,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-gallery-2{
@@ -1238,7 +2391,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-gallery-3{
       background-image: url(../asets/gallery\ 3.jpg);
@@ -1247,7 +2402,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-gallery-4{
@@ -1257,7 +2414,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-gallery-5{
@@ -1267,7 +2426,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-gallery-6{
@@ -1277,7 +2438,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-gallery-7{
@@ -1287,7 +2450,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-mentors{
       background-image: url(../asets/kaxi.jpg);
@@ -1296,7 +2461,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-mentors2{
       background-image: url(../asets/mentors1.jpeg);
@@ -1305,7 +2472,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-mentors3{
       background-image: url(../asets/mentors2.jpeg);
@@ -1314,7 +2483,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-mentors4{
       background-image: url(../asets/mentors3.jpeg);
@@ -1323,7 +2494,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-mentors5{
@@ -1333,7 +2506,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-mentors6{
       background-image: url(../asets/mentors6.jpg);
@@ -1342,7 +2517,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       
@@ -1353,7 +2530,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-partneors2{
@@ -1363,7 +2542,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-partneors3{
@@ -1373,7 +2554,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-partneors4{
       background-image: url(../asets/partneors3.png);
@@ -1382,7 +2565,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-partneors5{
       background-image: url(../asets/partneors4.png);
@@ -1391,7 +2576,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-partneors6{
       background-image: url(../asets/partneors5.png);
@@ -1400,7 +2587,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-partneors7{
       background-image: url(../asets/partneors6.png);
@@ -1409,7 +2598,9 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
   
@@ -1417,6 +2608,1002 @@ body {
   
   
   @media only screen and (max-width: 1250px) {
+    .texter-container-swiper-edited{
+        color: rgb(255, 255, 255);
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    
+    .picer-container-swiper::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* --- */
+
+
+    .picer-container-swiper2::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper2:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper2:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ----- */
+
+    .picer-container-swiper3::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper3:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper3:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ----- */
+
+
+    .picer-container-swiper4::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper4:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper4:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ---- */
+
+
+    .picer-container-swiper5::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper5:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper5:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ----- */
+
+
+    .picer-container-swiper6::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper6:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper6:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ----- */
+
+
+
+
+    .picer-container-swiper7::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper7:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper7:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ------------ */
+
+
+    .picer-container-swiper-gallery-1::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-1:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-1:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ---------- */
+
+
+    .picer-container-swiper-gallery-2::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-2:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-2:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ----- */
+
+
+    .picer-container-swiper-gallery-3::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-3:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-3:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+
+/* ------- */
+
+
+    .picer-container-swiper-gallery-4::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-4:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-4:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ------ */
+
+
+    .picer-container-swiper-gallery-5::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-5:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-5:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ------ */
+
+
+    .picer-container-swiper-gallery-6::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-6:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-6:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* --------------- */
+
+
+    .picer-container-swiper-gallery-7::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-gallery-7:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.picer-container-swiper-gallery-7:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ------- */
+
+
+    .picer-container-swiper-mentors::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+
+/* ------ */
+
+
+    .picer-container-swiper-mentors2::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors2:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors2:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+
+/* ----- */
+
+
+    .picer-container-swiper-mentors3::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors3:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors3:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ----- */
+
+
+    .picer-container-swiper-mentors4::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors4:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors4:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ------------ */
+
+
+    .picer-container-swiper-mentors5::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors5:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors5:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* --- */
+
+
+    .picer-container-swiper-mentors6::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors6:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors6:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+  
+/* ---- */
+
+
+    .picer-container-swiper-mentors7::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.picer-container-swiper-mentors7:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.picer-container-swiper-mentors7:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ---- */
+
+
+    .picer-container-swiper-partneors::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ---- */
+
+
+    .picer-container-swiper-partneors2::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors2:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors2:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ---- */
+
+
+    .picer-container-swiper-partneors3::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors3:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors3:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* --- */
+
+
+
+    .picer-container-swiper-partneors4::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors4:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors4:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ---- */
+
+
+    .picer-container-swiper-partneors5::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors5:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors5:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+/* --- */
+
+
+
+    .picer-container-swiper-partneors6::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors6:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors6:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+/* ------ */
+
+
+
+    .picer-container-swiper-partneors7::before{
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+ .picer-container-swiper-partneors7:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+ .picer-container-swiper-partneors7:hover{
+ transition: 0.6s;
+ transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.5);
+  padding: 10px;
+}
+
+
+    
+    .linkkk{
+      border: 1px solid rgba(0,255,255,0.5);
+          border-radius: 20px;
+          box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
+         position: relative;
+    }
+  
+      .box-container-swiper-edited{
+          width: var(--swiper-width);
+          height: 30vh;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end; 
+          position: relative;
+          border-radius: 20px;
+      }
+
+
+ .link-display{
+      color: white;
+      display: none;
+      overflow: hidden;
+    
+    }
+
+
+
+
+
+      .link-display{
+      color: white;
+      display: none;
+      overflow: hidden;
+    
+    }
+
+    .about-uss{
+      overflow-wrap: anywhere;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      color: white;
+      /* border: 1px solid rgba(0,255,255,0.5); */
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.692);
+      width: 180px;
+      text-align: center;
+      border: none;
+      /* outline: none; */
+      color: #fff;
+      background:#16213b;
+      cursor: pointer;
+      border-radius: 10px;
+      margin: 20px 0px;
+      font-size: 20px;  
+      height: 40px;
+
+    }
+
+    .about-uss:hover > .link-display{
+      display: flex;
+    }
+
+    .about-uss:hover{
+        height: fit-content;
+    }
+    
+
+
+
+
+    
     .box-container-swiper{
       width: 220px;
       height: 220px;
@@ -1436,68 +3623,119 @@ body {
       height: 40px;
     }
   
-   
-    .box-container-swiper:hover{
-      scale: 1.1;
-      
-      
-      }
-      .picer-container-swiper{
+    .picer-container-swiper{
       background-image: url(../asets/cur-1.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
-      
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      animation: 0.3s ease-in-out;
       }
       .picer-container-swiper2{
       background-image: url(../asets/course-2.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
-      
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper3{
       background-image: url(../asets/course-3.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      /* border-radius: 15px; */
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       
       }
       .picer-container-swiper4{
         background-image: url(../asets/course-img1.jpeg);
         background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
-      
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper5{
       background-image: url(../asets/course-img2.jpeg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
-      
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper6{
       background-image: url(../asets/course-4.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       
       }
+
+ .picer-container-swiper7{
+  background-image: url(../asets/microsoftsuite.webp);
+  background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+  }
+      
+        
+ .picer-container-swiper8{
+  background-image: url(../asets/google-workspace.jpg);
+  background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+  }
+      
+
+  .picer-container-swiper9{
+  background-image: url(../asets/managment.jpg);
+  background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+  }
+      
+      
+        
       
       
       
@@ -1508,111 +3746,150 @@ body {
       background-image: url(../asets/gallery\ 1.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-gallery-2{
       background-image: url(../asets/gallery\ 2.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-gallery-3{
       background-image: url(../asets/gallery\ 3.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-gallery-4{
       background-image: url(../asets/gallery\ 4.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-gallery-5{
       background-image: url(../asets/gallery\ 5.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-gallery-6{
       background-image: url(../asets/gallery\ 6.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-gallery-7{
       background-image: url(../asets/kaxi.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-mentors{
       background-image: url(../asets/kaxi.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-mentors2{
       background-image: url(../asets/mentors1.jpeg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-mentors3{
       background-image: url(../asets/mentors2.jpeg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-mentors4{
       background-image: url(../asets/mentors3.jpeg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-mentors5{
       background-image: url(../asets/mentors5.jpeg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-mentors6{
       background-image: url(../asets/mentors6.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       
@@ -1620,62 +3897,82 @@ body {
       background-image: url(../asets/partneors.png);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-partneors2{
       background-image: url(../asets/partneors1.png);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
       .picer-container-swiper-partneors3{
       background-image: url(../asets/partneors2.png);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-partneors4{
       background-image: url(../asets/partneors3.png);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-partneors5{
       background-image: url(../asets/partneors4.png);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-partneors6{
       background-image: url(../asets/partneors5.png);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       .picer-container-swiper-partneors7{
       background-image: url(../asets/partneors6.png);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 220px;
-      height: 220px;
-      border-radius: 15px;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       }
       
-  
   }
     
   
@@ -1703,6 +4000,18 @@ body {
   
   }
   @media only screen and (max-width: 1030px) {
+
+  .link-display{
+      color: white;
+      display: none;
+      overflow: hidden;
+    
+    }
+
+    .about-uss{
+      width: 150px;
+    }
+
   
     .swiper-button-next, .swiper-button-prev {
       display: none;
@@ -1712,754 +4021,135 @@ body {
       width: 150px;
       height: 40px;
     }
+   
+
     .box-container-swiper{
-      width: 150px;
-      height: 150px;
+      width: calc((100vw - 180px) / 4);
+      height: var(--swiper-width);
       position: relative;
       box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
       transition: ease-in-out;
       transition-duration: 0.5s;
       border-radius: 15px;
       overflow: hidden;
-      
-      margin-top: 40px;
-    
+      margin: 0;
+    }
+
+    .swiper-slide{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-position: center;
+      background-size: cover;
+      width: var(--swiper-width);
+      height: var(--swiper-width);
+    }
+
+
+    .linkkk{
+      border: 1px solid rgba(0,255,255,0.5);
+          border-radius: 20px;
+          box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
+         position: relative;
     }
   
-    .box-container-swiper:hover{
-      scale: 1.1;
-      
-      
+      .box-container-swiper-edited{
+          width: var(--swiper-width);
+          height: 22vh;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end; 
+          position: relative;
+          border-radius: 20px;
       }
-      .picer-container-swiper{
-      background-image: url(../asets/cur-1.jpg);
+
+   
+  
+  }
+  
+
+  @media only screen and (max-width: 900px) {
+
+  .link-display{
+      color: white;
+      display: none;
+      overflow: hidden;
+    
+    }
+
+    .about-uss{
+      width: 150px;
+    }
+
+  
+    .swiper-button-next, .swiper-button-prev {
+      display: none;
+    }
+  
+    .glow-on-hover{
+      width: 150px;
+      height: 40px;
+    }
+   
+
+    .box-container-swiper{
+      width: calc((100vw - 180px) / 4);
+      height: var(--swiper-width);
+      position: relative;
+      box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
+      transition: ease-in-out;
+      transition-duration: 0.5s;
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .swiper-slide{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-position: center;
       background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      
+      width: var(--swiper-width);
+      height: var(--swiper-width);
+    }
+
+
+    .linkkk{
+      border: 1px solid rgba(0,255,255,0.5);
+          border-radius: 20px;
+          box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
+         position: relative;
+    }
+  
+      .box-container-swiper-edited{
+          width: var(--swiper-width);
+          height: 18vh;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end; 
+          position: relative;
+          border-radius: 20px;
       }
-      .picer-container-swiper2{
-      background-image: url(../asets/course-2.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      
-      }
-      
-      .picer-container-swiper3{
-      background-image: url(../asets/course-3.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      
-      }
-      .picer-container-swiper4{
-        background-image: url(../asets/course-img1.jpeg);
-        background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      
-      }
-      .picer-container-swiper5{
-      background-image: url(../asets/course-img2.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      
-      }
-      
-      .picer-container-swiper6{
-      background-image: url(../asets/course-4.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      
-      }
-      
-      
-      
-      .picer-container-swiper:hover,.picer-container-swiper2:hover,.picer-container-swiper3:hover,.picer-container-swiper4:hover,.picer-container-swiper5:hover,.picer-container-swiper6:hover{
-      border-radius: 15px;
-      }
-      .picer-container-swiper-gallery-1{
-      background-image: url(../asets/gallery\ 1.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-2{
-      background-image: url(../asets/gallery\ 2.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-gallery-3{
-      background-image: url(../asets/gallery\ 3.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-4{
-      background-image: url(../asets/gallery\ 4.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-5{
-      background-image: url(../asets/gallery\ 5.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-6{
-      background-image: url(../asets/gallery\ 6.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-7{
-      background-image: url(../asets/kaxi.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors{
-      background-image: url(../asets/kaxi.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors2{
-      background-image: url(../asets/mentors1.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors3{
-      background-image: url(../asets/mentors2.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors4{
-      background-image: url(../asets/mentors3.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-mentors5{
-      background-image: url(../asets/mentors5.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors6{
-      background-image: url(../asets/mentors6.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      
-      
-      .picer-container-swiper-partneors{
-      background-image: url(../asets/partneors.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-partneors2{
-      background-image: url(../asets/partneors1.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-partneors3{
-      background-image: url(../asets/partneors2.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-partneors4{
-      background-image: url(../asets/partneors3.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-partneors5{
-      background-image: url(../asets/partneors4.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-partneors6{
-      background-image: url(../asets/partneors5.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-partneors7{
-      background-image: url(../asets/partneors6.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 150px;
-      border-radius: 15px;
-      }
+
+   
   
   }
   
   
-  
-  @media only screen and (max-width: 580px) {
-    
-    
-    .picer-container-swiper{
-      background-image: url(../asets/cur-1.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      
-      }
-      .picer-container-swiper2{
-      background-image: url(../asets/course-2.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      
-      }
-      
-      .picer-container-swiper3{
-      background-image: url(../asets/course-3.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      
-      }
-      .picer-container-swiper4{
-        background-image: url(../asets/course-img1.jpeg);
-        background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      
-      }
-      .picer-container-swiper5{
-      background-image: url(../asets/course-img2.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      
-      }
-      
-      .picer-container-swiper6{
-      background-image: url(../asets/course-4.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      
-      }
-      
-      
-      
-      .picer-container-swiper:hover,.picer-container-swiper2:hover,.picer-container-swiper3:hover,.picer-container-swiper4:hover,.picer-container-swiper5:hover,.picer-container-swiper6:hover{
-      border-radius: 15px;
-      }
-      .picer-container-swiper-gallery-1{
-      background-image: url(../asets/gallery\ 1.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-2{
-      background-image: url(../asets/gallery\ 2.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-gallery-3{
-      background-image: url(../asets/gallery\ 3.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-4{
-      background-image: url(../asets/gallery\ 4.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-5{
-      background-image: url(../asets/gallery\ 5.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-6{
-      background-image: url(../asets/gallery\ 6.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-7{
-      background-image: url(../asets/kaxi.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors{
-      background-image: url(../asets/kaxi.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors2{
-      background-image: url(../asets/mentors1.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors3{
-      background-image: url(../asets/mentors2.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors4{
-      background-image: url(../asets/mentors3.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-mentors5{
-      background-image: url(../asets/mentors5.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors6{
-      background-image: url(../asets/mentors6.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      
-      
-      .picer-container-swiper-partneors{
-      background-image: url(../asets/partneors.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-partneors2{
-      background-image: url(../asets/partneors1.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-partneors3{
-      background-image: url(../asets/partneors2.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-partneors4{
-      background-image: url(../asets/partneors3.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-partneors5{
-      background-image: url(../asets/partneors4.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-partneors6{
-      background-image: url(../asets/partneors5.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-partneors7{
-      background-image: url(../asets/partneors6.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-      border-radius: 15px;
-      }
-      
-  
-      .box-container-swiper{
-        width: 200px;
-        height: 200px;
-        position: relative;
-        box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
-        transition: ease-in-out;
-        transition-duration: 0.5s;
-        border-radius: 15px;
-        overflow: hidden;
-        
-        margin-top: 40px;
-      
-      }
-      
-  }
+
   
   
-  
-  @media only screen and (max-width: 915px) {
-  
-  
-    .picer-container-swiper{
-      background-image: url(../asets/cur-1.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      
-      }
-      .picer-container-swiper2{
-      background-image: url(../asets/course-2.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      
-      }
-      
-      .picer-container-swiper3{
-      background-image: url(../asets/course-3.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      
-      }
-      .picer-container-swiper4{
-        background-image: url(../asets/course-img1.jpeg);
-        background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      
-      }
-      .picer-container-swiper5{
-      background-image: url(../asets/course-img2.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      
-      }
-      
-      .picer-container-swiper6{
-      background-image: url(../asets/course-4.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      
-      }
-      
-      
-      
-      .picer-container-swiper:hover,.picer-container-swiper2:hover,.picer-container-swiper3:hover,.picer-container-swiper4:hover,.picer-container-swiper5:hover,.picer-container-swiper6:hover{
-      border-radius: 15px;
-      }
-      .picer-container-swiper-gallery-1{
-      background-image: url(../asets/gallery\ 1.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-2{
-      background-image: url(../asets/gallery\ 2.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-gallery-3{
-      background-image: url(../asets/gallery\ 3.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-4{
-      background-image: url(../asets/gallery\ 4.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-5{
-      background-image: url(../asets/gallery\ 5.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-6{
-      background-image: url(../asets/gallery\ 6.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-gallery-7{
-      background-image: url(../asets/kaxi.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors{
-      background-image: url(../asets/kaxi.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors2{
-      background-image: url(../asets/mentors1.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors3{
-      background-image: url(../asets/mentors2.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors4{
-      background-image: url(../asets/mentors3.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-mentors5{
-      background-image: url(../asets/mentors5.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-mentors6{
-      background-image: url(../asets/mentors6.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      
-      
-      .picer-container-swiper-partneors{
-      background-image: url(../asets/partneors.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-partneors2{
-      background-image: url(../asets/partneors1.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-partneors3{
-      background-image: url(../asets/partneors2.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-partneors4{
-      background-image: url(../asets/partneors3.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-partneors5{
-      background-image: url(../asets/partneors4.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      
-      .picer-container-swiper-partneors6{
-      background-image: url(../asets/partneors5.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-      .picer-container-swiper-partneors7{
-      background-image: url(../asets/partneors6.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      }
-  
+  @media only screen and (max-width: 850px) {
+
+       .swiper-slide{
+      width: 400px;
+      height: 400px;
+    }
     .swiper-button-next, .swiper-button-prev {
       display: none;
     }
@@ -2475,6 +4165,7 @@ body {
     .sidebar2{
       display: block;
     }
+
   }
   
   .logo{
@@ -2697,6 +4388,41 @@ body {
   
   
   
+  @media only screen and (min-width: 1900px) {
+
+    .about-uss{
+      overflow-wrap: anywhere;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      color: white;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.692);
+      width: 370px;
+      text-align: center;
+      border: none;
+      color: #fff;
+      background:#16213b;
+      cursor: pointer;
+      border-radius: 10px;
+      margin: 20px 0px;
+      font-size: 20px;  
+      height: 50px;
+      
+    }
+
+    .about-uss:hover{
+      padding-bottom: 20px;
+    }
+
+
+    .glow-on-hover{
+      width: 370px;
+    }
+
+  }
+
   
   
   

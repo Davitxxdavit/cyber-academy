@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import styles from './mentors.module.css';
 import { Link } from 'react-router-dom';
-
+// import mentor1IMG from '../asets/mentors1.jpeg';
+// import mentor2IMG from '../asets/mentors3.jpeg';
+import { motion } from 'motion/react';
 const MentorsPage = () => {
   const [miniSidebar, setMiniSidebar] = useState(false);
   const [micVisible, setMicVisible] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [isClicked, setIsClicked] = useState(false);
+  
+    const clickAboutUs = () => {
+      return setIsClicked(!isClicked);
+    }
 
   const handleMouseEnter = () => {
     setMiniSidebar(true);
@@ -42,9 +49,41 @@ const MentorsPage = () => {
         <a className={styles.closebtn} onClick={closeNav}>☰</a>
         <Link to="/">მთავარი</Link>
         <Link to="/courses">კურსები</Link>
-        <Link to="/gallery">გალერეა</Link>
+        <Link to="/gallery">კარიერა</Link>
         <Link to="/mentors">გუნდი</Link>
-        <Link to="/partners">პარტნიორები</Link>
+        <div className={styles.mobileAboutUs}>
+                           <p onClick={clickAboutUs}>ჩვენს შესახებ</p>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/mission">მისია,ხედვა,ღირებულებები</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/norms">მარეგურილებერი ნორმები</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/quality">ხარისხის უზრუნველყოფა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/strategy">სტრატეგიული განვითარების გეგმა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/plan">სამოქმედო გეგმა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+        </div>
       </div>
       
       <div id="main2" style={{ marginLeft: sidebarOpen ? '250px' : '0' }}>
@@ -66,11 +105,17 @@ const MentorsPage = () => {
           <button className={styles.glowOnHover} type="button">კურსები</button>
         </Link>    
         <Link to="/gallery">
-          <button className={styles.glowOnHover} type="button">გალერეა</button>
+          <button className={styles.glowOnHover} type="button">კარიერა</button>
         </Link>
-        <Link to="/partners">
-          <button className={styles.glowOnHover} type="button">პარტნიორები</button>
-        </Link>
+         <div className={styles.aboutUs}>
+                            <p >ჩვენს შესახებ</p>
+                            <Link className={styles.linkDisplay} to="/mission">მისია,ხედვა,ღირებულებები</Link>
+                            <Link className={styles.linkDisplay} to="/norms">მარეგურილებერი ნორმები</Link>
+                            <Link className={styles.linkDisplay} to="/quality">ხარისხის უზრუნველყოფა</Link>
+                            <Link className={styles.linkDisplay} to="/strategy">სტრატეგიული განვითარების გეგმა</Link>
+                            <Link className={styles.linkDisplay} to="/plan">სამოქმედო გეგმა</Link>
+                            <Link className={styles.linkDisplay} to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+         </div>
       </div>
       <div
         className="sidebar"
@@ -162,41 +207,41 @@ const MentorsPage = () => {
 
       <div id="mento" className={styles.container3}>
         <div className={styles.headerContainer3}>აკადემიის სტრუქტურა</div>
-        <div className={styles.fixTiIn}>
-          <div className={styles.contentBoxContainer3}>
-            <div className={styles.line1}>
-              <div className={styles.mentorsBox}>
-                <div className={styles.fixPicerContainer3}>
-                  <div className={styles.picerMentors}></div>
-                </div>
-                <div className={styles.contentMentors}>
-                  <div className={styles.headerConntainer3}>კახი კახიძე</div>
-                  <div className={styles.texterContainer3_1}>
-                    აკადემიის მასწავლებელი
-                  </div>
-                  <div className={styles.bigTexterContainer3}>
-                    კომპიუტერულ მეცნიერებათა მაგისტრი, ბათუმის სახელმწიფო უნივერსიტეტის მოწვეული მასწავლებელი, WEB დეველოპერი
-                  </div>
-                </div>
-              </div>
-              <div className={styles.mentorsBox}>
-                <div className={styles.fixPicerContainer3}>
-                  <div className={styles.picerMentors1}></div>
-                </div>
-                <div className={styles.contentMentors}>
-                  <div className={styles.headerConntainer3}>დემიდ ფასიეშვილი</div>
-                  <div className={styles.texterContainer3_1}>
-                    აკადემიის დამფუძნებელი
-                  </div>
-                  <div className={styles.bigTexterContainer3}>
-                    კომპიუტერულ მეცნიერებათა მაგისტრი ბათუმის სახელმწიფო უნივერსიტეტის მასწავლებელი
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className={styles.founder}>დამფუძნებელი</div>
+        <div className={styles.founders}>
+                 <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                              duration: 0.4,
+                              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                        }}
+                        className={styles.founder1}>
+                      <div className={styles.mentorsBox}>
+                          <div className={styles.fixPicerContainer3}>
+                            <div className={styles.picerMentors1}></div>
+                          </div>
+                          <div className={styles.contentMentors}>
+                            <div className={styles.headerConntainer3}>დემიდ ფასიეშვილი</div>
+                            <div className={styles.texterContainer3_1}>
+                              აკადემიის დამფუძნებელი
+                            </div>
+                            <div className={styles.bigTexterContainer3}>
+                              კომპიუტერულ მეცნიერებათა მაგისტრი ბათუმის სახელმწიფო უნივერსიტეტის მასწავლებელი
+                            </div>
+                          </div>
+                       </div>
+                </motion.div>
 
-            <div className={styles.line2}>
-              <div className={styles.mentorsBox}>
+                <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                              duration: 0.4,
+                              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                        }}
+                        className={styles.founder2}>
+                       <div className={styles.mentorsBox}>
                 <div className={styles.fixPicerContainer3}>
                   <div className={styles.picerMentors2}></div>
                 </div>
@@ -210,59 +255,117 @@ const MentorsPage = () => {
                   </div>
                 </div>
               </div>
+                      
+                </motion.div>
+    
+        </div>
 
-              <div className={styles.mentorsBox}>
-                <div className={styles.fixPicerContainer3}>
-                  <div className={styles.picerMentors3}></div>
-                </div>
-                <div className={styles.contentMentors}>
-                  <div className={styles.headerConntainer3}>გიორგი კალანდაძე</div>
-                  <div className={styles.texterContainer3_1}>
-                    აკადემიის მასწავლებელი
-                  </div>
-                  <div className={styles.bigTexterContainer3}>
-                    კომპიუტერულ მეცნიერებათა ბაკალავრი ფოტოგრაფი, მარკეტინგის სპეციალისტი
-                  </div>
-                </div>
-              </div>
-            </div>
+          <h2 className={styles.mentorsHeading}>მენტორები</h2> 
 
-            <div className={styles.line3}>
-              <div className={styles.mentorsBox}>
-                <div className={styles.fixPicerContainer3}>
-                  <div className={styles.picerMentors4}></div>
-                </div>
-                <div className={styles.contentMentors}>
-                  <div className={styles.headerConntainer3}>Lorem ipsum</div>
-                  <div className={styles.texterContainer3_1}>
-                    Experience - Lorem ipsum dolor sit amet
-                  </div>
-                  <div className={styles.texterContainer3_2}>
-                    Experience - Lorem ipsum dolor sit amet
-                  </div>
-                  <div className={styles.bigTexterContainer3}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elittttt.
-                    Aliquam, saepe accusadolor dolor dolordolor
-                  </div>
-                </div>
-              </div>
+         <div className={styles.mentorsFlex}>
+                       <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                              duration: 0.4,
+                              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                        }}
+                        className={styles.founder2}>
+                      <div className={styles.mentorsBox}>
+                          <div className={styles.fixPicerContainer3}>
+                            <div className={styles.picerMentors}></div>
+                          </div>
+                          <div className={styles.contentMentors}>
+                            <div className={styles.headerConntainer3}>კახი კახიძე</div>
+                            <div className={styles.texterContainer3_1}>
+                              აკადემიის მასწავლებელი
+                            </div>
+                            <div className={styles.bigTexterContainer3}>
+                              კომპიუტერულ მეცნიერებათა მაგისტრი, ბათუმის სახელმწიფო უნივერსიტეტის მოწვეული მასწავლებელი, WEB დეველოპერი
+                            </div>
+                          </div>
+                      </div>
+                      
+                </motion.div>
 
-              <div className={styles.mentorsBox}>
-                <div className={styles.fixPicerContainer3}>
-                  <div className={styles.picerMentors5}></div>
-                </div>
-                <div className={styles.contentMentors}>
-                  <div className={styles.headerConntainer3}>მიხეილ დონაძე</div>
-                  <div className={styles.texterContainer3_1}>
-                    აკადემიის დირექტორი
-                  </div>
-                  <div className={styles.bigTexterContainer3}>
-                    კომპიუტერულ მეცნიერებათა დოქტორი ბათუმის სახელმწიფო უნივერსიტეტის ასოცირებული პროფესორი
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                 <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                              duration: 0.4,
+                              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                        }}
+                        className={styles.founder2}>
+                         <div className={styles.mentorsBox}>
+                              <div className={styles.fixPicerContainer3}>
+                                <div className={styles.picerMentors3}></div>
+                              </div>
+                              <div className={styles.contentMentors}>
+                                <div className={styles.headerConntainer3}>გიორგი კალანდაძე</div>
+                                <div className={styles.texterContainer3_1}>
+                                  აკადემიის მასწავლებელი
+                                </div>
+                                <div className={styles.bigTexterContainer3}>
+                                  კომპიუტერულ მეცნიერებათა ბაკალავრი ფოტოგრაფი, მარკეტინგის სპეციალისტი
+                                </div>
+                              </div>
+                            </div>
+                      
+                </motion.div>
+
+                 <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                              duration: 0.4,
+                              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                        }}
+                        className={styles.founder2}>
+                       <div className={styles.mentorsBox}>
+                          <div className={styles.fixPicerContainer3}>
+                            <div className={styles.picerMentors4}></div>
+                          </div>
+                          <div className={styles.contentMentors}>
+                            <div className={styles.headerConntainer3}>Lorem ipsum</div>
+                            <div className={styles.texterContainer3_1}>
+                              Experience - Lorem ipsum dolor sit amet
+                            </div>
+                            <div className={styles.texterContainer3_2}>
+                              Experience - Lorem ipsum dolor sit amet
+                            </div>
+                            <div className={styles.bigTexterContainer3}>
+                              Lorem ipsum dolor sit amet consectetur adipisicing elittttt.
+                              Aliquam, saepe accusadolor dolor dolordolor
+                            </div>
+                          </div>
+                        </div>
+                      
+                </motion.div>
+
+                 <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                              duration: 0.4,
+                              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                        }}
+                        className={styles.founder2}>
+                              <div className={styles.mentorsBox}>
+                                  <div className={styles.fixPicerContainer3}>
+                                    <div className={styles.picerMentors5}></div>
+                                  </div>
+                                  <div className={styles.contentMentors}>
+                                    <div className={styles.headerConntainer3}>მიხეილ დონაძე</div>
+                                    <div className={styles.texterContainer3_1}>
+                                      აკადემიის დირექტორი
+                                    </div>
+                                    <div className={styles.bigTexterContainer3}>
+                                      კომპიუტერულ მეცნიერებათა დოქტორი ბათუმის სახელმწიფო უნივერსიტეტის ასოცირებული პროფესორი
+                                    </div>
+                                  </div>
+                             </div>
+                      
+                </motion.div>                        
         </div>
       </div>
     </div>

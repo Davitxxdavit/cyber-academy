@@ -12,6 +12,15 @@ import IT from "./components/It";
 import Algos from "./components/Algos";
 import Office from "./components/Office";
 import Photo from "./components/Photo";
+import Mission from './components/Mission';
+import Norms from './components/Norms';
+import Quality from './components/Quality';
+import Strategy from './components/Strategy';
+import Plan from './components/Plan';
+import Finance from './components/Finance';
+import MicrosoftSuite from './components/MicrosoftSuite';
+import GoogleWorkspace from './components/GoogleWorkspace';
+import Managment from './components/Managment';
 
 function App() {
   return (
@@ -30,7 +39,17 @@ function App() {
           <Route path="/Algos" element={<Algos />} />
           <Route path="/Office" element={<Office />} />
           <Route path="/Photograph" element={<Photo />} />
+          <Route path="/Mission" element={<Mission/>} />
+          <Route path="/Norms" element={<Norms/>} />
+          <Route path="/Quality" element={<Quality/>} />
+          <Route path="/Strategy" element={<Strategy/>} />
+          <Route path="/Plan" element={<Plan/>} />
+          <Route path="/Finance" element={<Finance/>} />
+          <Route path="/MicrosoftSuite" element={<MicrosoftSuite/>} />
+          <Route path="/GoogleWorkspace" element={<GoogleWorkspace/>} />
+          <Route path="/Managment" element={<Managment/>} />
 
+         
         </Routes>
       </BrowserRouter>
     </div>

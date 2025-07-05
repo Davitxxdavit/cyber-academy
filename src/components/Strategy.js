@@ -1,51 +1,44 @@
-import React, { use, useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './gallery.module.css';
-import PartnersPage from './Partners';
-const GalleryPage = () => {
- const [miniSidebar, setMiniSidebar] = useState(false);
-  const [micVisible, setMicVisible] = useState(true);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
+import styles from '../components/AboutUs.module.css';
 
-  const clickAboutUs = () => {
-    return setIsClicked(!isClicked);
-  }
+const Strategy = () => {
 
-  const handleMouseEnter = () => {
-    setMiniSidebar(true);
-    setMicVisible(false); 
-  };
-
-  const handleMouseLeave = () => {
-    setTimeout(() => {
-      setMiniSidebar(false);
-      setMicVisible(true);
-    }, 300);
-  };
-
-  const openNav = () => {
-    setSidebarOpen(true);
-  };
-
-  const closeNav = () => {
-    setSidebarOpen(false);
-  };
-
+    const [miniSidebar, setMiniSidebar] = useState(false);
+                  const [micVisible, setMicVisible] = useState(true);
+                  const [sidebarOpen, setSidebarOpen] = useState(false);
+                  const [isClicked, setIsClicked] = useState(false);
+                
+                  const clickAboutUs = () => {
+                    return setIsClicked(!isClicked);
+                  }
+                
+                  const handleMouseEnter = () => {
+                    setMiniSidebar(true);
+                    setMicVisible(false); 
+                  };
+                
+                  const handleMouseLeave = () => {
+                    setTimeout(() => {
+                      setMiniSidebar(false);
+                      setMicVisible(true);
+                    }, 300);
+                  };
+                
+                  const openNav = () => {
+                    setSidebarOpen(true);
+                  };
+                
+                  const closeNav = () => {
+                    setSidebarOpen(false);
+                  };
   return (
-
     
     <div>
-      <div
-        id="mySidebar2"
-        className={styles.sidebar2}
-        style={{ width: sidebarOpen ? '250px' : '0' }}
-      >
-        <a href="javascript:void(1)" className={styles.closebtn} onClick={closeNav}>
-          ☰
-        </a>
+      <div id="mySidebar2" className={styles.sidebar2} style={{ width: sidebarOpen ? '250px' : '0' }}>
+        <button className={styles.closebtn} onClick={closeNav}>☰</button>
         <Link to="/">მთავარი</Link>
-        <Link to="/courses">კურსები</Link>
         <Link to="/gallery">კარიერა</Link>
         <Link to="/mentors">გუნდი</Link>
         <div className={styles.mobileAboutUs}>
@@ -82,31 +75,29 @@ const GalleryPage = () => {
                            } className={styles.linkDisplayMobile} to="/finance">ფინანსური საქმიანობის შესახებ</Link>
         </div>
       </div>
-
-      {/* Main 2 (Hamburger Button Container) */}
-      <div id="main2">
-        <button className={styles.openbtn} id="openBtn" onClick={openNav}>
+      
+      <div id="main2" style={{ marginLeft: sidebarOpen ? '250px' : '0' }}>
+        <button 
+          className={styles.openbtn} 
+          id="openBtn" 
+          onClick={openNav} 
+          style={{ display: sidebarOpen ? 'none' : 'block' }}
+        >
           ☰
-        </button>
+        </button>  
       </div>
 
       <div className={styles.container}>
         <Link to="/">
-          <button className={styles.glowOnHover} type="button">
-            მართვა
-          </button>
+          <button className={styles.glowOnHover} type="button">მართვა</button>
         </Link>
-        <Link to="/courses">
-          <button className={styles.glowOnHover} type="button">
-            კურსები
-          </button>
+        <Link to="/gallery">
+          <button className={styles.glowOnHover} type="button">კარიერა</button>
         </Link>
         <Link to="/mentors">
-          <button className={styles.glowOnHover} type="button">
-            გუნდი
-          </button>
+          <button className={styles.glowOnHover} type="button">გუნდი</button>
         </Link>
-        <div className={styles.aboutUs}>
+         <div className={styles.aboutUs}>
                            <p >ჩვენს შესახებ</p>
                            <Link className={styles.linkDisplay} to="/mission">მისია,ხედვა,ღირებულებები</Link>
                            <Link className={styles.linkDisplay} to="/norms">მარეგურილებერი ნორმები</Link>
@@ -117,7 +108,7 @@ const GalleryPage = () => {
                         </div>
       </div>
 
-      <div
+       <div
         className="sidebar"
         style={{
           width: miniSidebar ? "430px" : "90px",
@@ -196,42 +187,20 @@ const GalleryPage = () => {
           </div>
         </div>
       </div>
-
-       <div
-        id="main"
+      <div
+        id={styles.main}
         style={{
           marginLeft: miniSidebar ? "430px" : "90px",
           transition: "margin-left 0.5s ease-in-out",
         }}
       ></div>
-      
-      <div>
-          <div className={styles.career}>
-            <h1>წარმატებული კურსდამთავრებულები</h1>
-          </div>
 
-          <div className={styles.careerLower1}>
-            <div className={styles.careerLower1Inner}>content</div>
-            <div className={styles.careerLower1Inner}>content</div>
-            <div className={styles.careerLower1Inner}>content</div>
-          </div>
+        <div className={styles.mainCon}>
 
-          <div className={styles.careerLower2}>
-            <div className={styles.careerLower2Inner}>content</div>
-            <div className={styles.careerLower2Inner}>content</div>
-            <div className={styles.careerLower2Inner}>content</div>
-            <div className={styles.careerLower2Inner}>content</div>
-          </div>
-
-          <div className={styles.careerPlan}>
-            კარიერის დაგეგმა
-          </div>
-          <PartnersPage />
-
-      </div>
-      
+        <h1>სტრატეგიული განვითარების გეგმა</h1>
+        </div>
     </div>
-  );
-};
+  )
+}
 
-export default GalleryPage;
+export default Strategy

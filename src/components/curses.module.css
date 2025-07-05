@@ -1,5 +1,74 @@
-.glow-on-hover {
+
+
+
+
+.mobileAboutUs{
+  color: #818181;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.mobileAboutUs p{
+  padding: 8px 8px 8px 32px;
+  margin: 0;
+}
+
+
+
+.mobileAboutUs .linkDisplayMobile{   
+   padding: 8px 8px 8px 32px;
+   color: white;
+}
+
+ .linkDisplay{
+      color: white;
+      display: none;
+      overflow: hidden;
+    
+    }
+
+.aboutUs{
+  overflow-wrap: anywhere;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.692);
   width: 220px;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: #fff;
+  background:#16213b;
+  cursor: pointer;
+  border-radius: 10px;
+  /* margin: 20px 0px; */
+  font-size: 20px;  
+  height: 50px;
+  z-index: 999;
+}
+
+.aboutUs:hover > .linkDisplay{
+  display: flex;
+}
+
+    .aboutUs:hover{
+        height: fit-content;
+    }
+
+
+
+.mobileAboutUs .linkDisplayMobile{   
+   padding: 8px 8px 8px 32px;
+   color: white;
+}
+
+
+.glow-on-hover {
+ width: 220px;
   height: 50px;
   border: none;
   outline: none;
@@ -9,10 +78,7 @@
   position: relative;
   z-index: 0;
   border-radius: 10px;
-  margin: 20px 0px;
   font-size: 20px;
-  margin-left: 80px;
-  top:-105px;
 }
 
 .glow-on-hover:before {
@@ -70,10 +136,16 @@
 
 div.container {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 50px;
   font-family: 'Raleway', sans-serif;
   text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+ z-index: 1;
+ width: 100%;
 }
 
 .header-container5 {
@@ -316,12 +388,7 @@ div.container {
   font-size: 36px;
   margin-left: 50px;
 }
-@media (min-width: 1900px) and (max-width: 3000px) {
-  .glow-on-hover{
-    width: 350px!important;
-    height: 60px!important;
-  }
-}
+
 .openbtn {
   font-size: 40px;
   cursor: pointer;
@@ -494,10 +561,10 @@ div.container {
 }
 
 @media only screen and (max-width: 1300px) {
-  .glow-on-hover {
+  /* .glow-on-hover {
     width: 180px;
     height: 40px;
-  }
+  } */
 }
 
 @media only screen and (max-width: 1440px) {
@@ -514,12 +581,16 @@ div.container {
   .glow-on-hover {
     width: 180px;
     height: 40px;
-    margin-left: 40px;
   }
   .productImage{
     margin-top: 120px;
     width: 300px;
     margin-right: 125px;
+  }
+
+  .aboutUs{
+    width: 180px;
+    height: 40px;
   }
 }
 
@@ -534,6 +605,9 @@ div.container {
 
 @media only screen and (max-width: 915px) {
   .glow-on-hover {
+    display: none;
+  }
+  .aboutUs{
     display: none;
   }
   .sidebar {
@@ -1060,6 +1134,7 @@ background-position-y: -10px;
   
    padding: 35px 35px 200px;
   position: relative;
+  top: 100px;
   /* overflow: hidden; */
   border: 1px solid rgba(255, 255, 255, 0.1); 
   margin-top: -50px;
@@ -1518,4 +1593,14 @@ background-position-y: -10px;
   width: 110px;
 }
 
+}
+@media (min-width: 1900px) and (max-width: 3000px) {
+
+  .aboutUs{
+    width: 370px;
+  }
+  .glow-on-hover{
+    width: 370px;
+    height: 50px;
+  }
 }

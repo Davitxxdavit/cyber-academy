@@ -7,11 +7,18 @@ import course3Image from '../asets/course-3.jpg';
 import course4Image from '../asets/course-img1.jpeg';
 import course5Image from '../asets/course-4.jpg';
 import course6Image from '../asets/course-img2.jpeg';
-
+import course7Image from '../asets/microsoftsuite.webp';
+import course8Image from '../asets/google-workspace.jpg';
+import course9Image from '../asets/managment.jpg';
 const AcademyPage = () => {
   const [miniSidebar, setMiniSidebar] = useState(false);
   const [micVisible, setMicVisible] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+const [isClicked, setIsClicked] = useState(false);
+
+  const clickAboutUs = () => {
+    return setIsClicked(!isClicked);
+  }
 
   const handleMouseEnter = () => {
     setMiniSidebar(true);
@@ -48,9 +55,41 @@ const AcademyPage = () => {
         <button className={styles.closebtn} onClick={closeNav}>☰</button>
         <Link to="/">მთავარი</Link>
         <Link to="/courses">კურსები</Link>
-        <Link to="/gallery">გალერეა</Link>
-        <Link to="/mentors">მენტორები</Link>
-        <Link to="/partners">პარტნიორები</Link>
+        <Link to="/gallery">კარიერა</Link>
+        <Link to="/mentors">გუნდი</Link>
+        <div className={styles.mobileAboutUs}>
+                           <p onClick={clickAboutUs}>ჩვენს შესახებ</p>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/mission">მისია,ხედვა,ღირებულებები</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/norms">მარეგურილებერი ნორმები</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/quality">ხარისხის უზრუნველყოფა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/strategy">სტრატეგიული განვითარების გეგმა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/plan">სამოქმედო გეგმა</Link>
+                           <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+        </div>
       </div>
       
       <div id={styles.main2} style={{
@@ -71,14 +110,20 @@ const AcademyPage = () => {
           <button className={styles['glow-on-hover']} type="button">მართვა</button>
         </Link>
         <Link to="/gallery">
-          <button className={styles['glow-on-hover']} type="button">გალერეა</button>
+          <button className={styles['glow-on-hover']} type="button">კარიერა</button>
         </Link>
         <Link to="/mentors">
-          <button className={styles['glow-on-hover']} type="button">მენტორები</button>
+          <button className={styles['glow-on-hover']} type="button">გუდნი</button>
         </Link>
-        <Link to="/partners">
-          <button className={styles['glow-on-hover']} type="button">პარტნიორები</button>
-        </Link>
+         <div className={styles.aboutUs}>
+                           <p >ჩვენს შესახებ</p>
+                           <Link className={styles.linkDisplay} to="/mission">მისია,ხედვა,ღირებულებები</Link>
+                           <Link className={styles.linkDisplay} to="/norms">მარეგურილებერი ნორმები</Link>
+                           <Link className={styles.linkDisplay} to="/quality">ხარისხის უზრუნველყოფა</Link>
+                           <Link className={styles.linkDisplay} to="/strategy">სტრატეგიული განვითარების გეგმა</Link>
+                           <Link className={styles.linkDisplay} to="/plan">სამოქმედო გეგმა</Link>
+                           <Link className={styles.linkDisplay} to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+                        </div>
       </div>
 
       <div
@@ -251,6 +296,48 @@ const AcademyPage = () => {
                 <img src={course6Image} alt="ფოტოგრაფია" />
                 <h2>ფოტოგრაფია, <br /> ფოტოგრაფია მარკეტინგში</h2>
                 <p>ფოტოგრაფიის აპარატურა და მისი შერჩევის თავისებურებები</p>
+              </div>
+            </div>
+          </Link>
+
+          <Link to="/MicrosoftSuite">
+            <div className={styles.box}>
+              <span>
+                <div className={styles.d1}>3 თვე</div>
+                <div className={styles.d2}>750 ლ.</div>
+              </span>
+              <div className={styles.content}>
+                <img src={course7Image} alt="microsoft suite" />
+                <h2>Microsoft Office Suite</h2>
+                <p>Microsoft Office Suite-ის გამოყენება(Word, Exel, Pdf, PowerPoint-ის უნქციები; ელექტრონული ხელმოწერა და შტამპი)</p>
+              </div>
+            </div>
+          </Link>
+
+          <Link to="/GoogleWorkspace">
+            <div className={styles.box}>
+              <span>
+                <div className={styles.d1}>3 თვე</div>
+                <div className={styles.d2}>750 ლ.</div>
+              </span>
+              <div className={styles.content}>
+                <img src={course8Image} alt="Google Wordkspace" />
+                <h2>Google Workspace</h2>
+                <p>Google Wordkspace-ის ინსტრუმენტების გამოყენება(Google Drive, Docs, sheets, Slides და Google Calendar-ის ეფექტური გამოყენება)</p>
+              </div>
+            </div>
+          </Link>
+
+          <Link to="/Managment">
+            <div className={styles.box}>
+              <span>
+                <div className={styles.d1}>3 თვე</div>
+                <div className={styles.d2}>750 ლ.</div>
+              </span>
+              <div className={styles.content}>
+                <img src={course9Image} alt="პროექტის მართვის საბაზისო პრინციპები" />
+                <h2>პროექტის მართვის საბაზისო პრინციპები</h2>
+                <p>პროექტის დაგეგმვა და განხორციელება; პროექტის მონიტორინგი და შეფასება; პროექტების მართვის ინფორმაციული სისტემები</p>
               </div>
             </div>
           </Link>
