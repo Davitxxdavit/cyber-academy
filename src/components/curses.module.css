@@ -21,11 +21,52 @@
    color: white;
 }
 
+.aboutUs hr{
+  width: 80%;
+  color: rgba(0, 255, 255, 0.692);
+  border: 1px solid rgba(0, 255, 255, 0.692);
+  margin: 0;
+  padding: 0;
+  display: none;
+  box-shadow: 0px 10px 20px rgba(0, 255, 255, 0.692);
+}
+.aboutUs:hover > hr{
+  display: block;
+}
+
+.aboutUs hr:last-child{
+  margin-bottom: 10px;
+}
+
  .linkDisplay{
       color: white;
       display: none;
       overflow: hidden;
-    
+     
+    }
+
+    .linkDisplay:hover{
+
+  animation: scaleUp 1s ease-in-out infinite;
+
+      background-color: #00f2fe;
+      color: black;
+      text-shadow: 10px 10px 20px  #00f2fe;
+      /* color: rgba(2, 68, 68, 0.984); */
+      box-shadow: 10px 10px 10px #00f2fe,
+                  -10px 10px 10px #00f2fe,
+                  10px -10px 10px #00f2fe,
+                  -10px -10px 10px #00f2fe ;
+    }
+
+    @keyframes scaleUp {
+      from{
+        scale: 1;
+      }
+
+      to{
+        scale: 1.02;
+      }
     }
 
 .aboutUs{
@@ -40,6 +81,7 @@
   width: 220px;
   text-align: center;
   border: none;
+
   outline: none;
   color: #fff;
   background:#16213b;
@@ -54,6 +96,8 @@
 .aboutUs:hover > .linkDisplay{
   display: flex;
 }
+
+
 
     .aboutUs:hover{
         height: fit-content;
@@ -343,6 +387,9 @@ div.container {
   animation: shadow-rotate 1.5s linear infinite;
   transform-origin: center;
 }
+
+
+
 
 @keyframes circle-size {
   from { width: 50px; height: 50px; }
@@ -1010,7 +1057,7 @@ background-position-y: -10px;
 } 
 
 .iconsContainer span{
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .sectionRegistrationInner{
@@ -1024,19 +1071,85 @@ background-position-y: -10px;
 }
 
 .spanN{
-  font-size: 1.3rem;
+  font-size: 2rem;
   margin-left: -120px;
 }
 
 .regBTN{
-  width: 200px;
-  height: 63px;
+  width: 250px;
+  height: 80px;
   border-radius: 15px;
   color: #16213b;
-  font-size: 1.28rem;
-  border: none;
+  font-size: 1.5rem;
+  border: transparent;
   cursor: pointer;
+  position: relative;
+  text-shadow: 15px 15px 25px rgba(12, 154, 154, 0.902),
+              -15px -15px 25px rgba(12, 154, 154, 0.822),
+              -15px 15px 25px rgba(12, 154, 154, 0.788),
+              15px -15px 25px rgba(12, 154, 154, 0.879);
+   box-shadow: 10px 10px 25px rgba(12, 154, 154, 0.4),
+                -10px -10px 25px rgba(12, 154, 154, 0.4),
+                -10px 10px 25px rgba(12, 154, 154, 0.4),
+                10px -10px 25px rgba(12, 154, 154, 0.4);
+  animation: payAttention 2s ease infinite;
+} 
+
+@keyframes payAttention {
+  0%{
+    scale: 0.7;
+    box-shadow: 10px 10px 15px rgba(12, 154, 154, 0.4),
+                -10px -10px 15px rgba(12, 154, 154, 0.4),
+                -10px 10px 15px rgba(12, 154, 154, 0.4),
+                10px -10px 15px rgba(12, 154, 154, 0.4);
+  }
+
+  20%{
+    scale: 0.8;
+    box-shadow: 10px 10px 18px rgba(12, 154, 154, 0.4),
+                -10px -10px 18px rgba(12, 154, 154, 0.4),
+                -10px 10px 18px rgba(12, 154, 154, 0.4),
+                10px -10px 18px rgba(12, 154, 154, 0.4);
+  }
+
+  40%{
+    scale: 0.6;
+    box-shadow: 10px 10px 13px rgba(12, 154, 154, 0.4),
+                -10px -10px 13px rgba(12, 154, 154, 0.4),
+                -10px 10px 13px rgba(12, 154, 154, 0.4),
+                10px -10px 13px rgba(12, 154, 154, 0.4);
+  }
+
+  60%{
+    scale: 1;
+    box-shadow: 10px 10px 25px rgba(12, 154, 154, 0.4),
+                -10px -10px 25px rgba(12, 154, 154, 0.4),
+                -10px 10px 25px rgba(12, 154, 154, 0.4),
+                10px -10px 25px rgba(12, 154, 154, 0.4);
+  }
+
+  80%{
+    scale: 1.2;
+    box-shadow: 10px 10px 30px rgba(12, 154, 154, 0.4),
+                -10px -10px 30px rgba(12, 154, 154, 0.4),
+                -10px 10px 30px rgba(12, 154, 154, 0.4),
+                10px -10px 30px rgba(12, 154, 154, 0.4);
+  }
+  100%{
+    scale: 1.1;
+    box-shadow: 10px 10px 27px rgba(12, 154, 154, 0.4),
+                -10px -10px 27px rgba(12, 154, 154, 0.4),
+                -10px 10px 27px rgba(12, 154, 154, 0.4),
+                10px -10px 27px rgba(12, 154, 154, 0.4);
+  }
 }
+
+
+.regBTN:hover{
+  animation: none;
+  color: rgba(2, 68, 68, 0.984);
+}
+
 
 .sylBTN{
    width: 200px;
@@ -1069,7 +1182,7 @@ background-position-y: -10px;
     display: block;
   }
 }
-
+/* 
 .regBTN:hover{
 
   background-color: #202A44;
@@ -1077,11 +1190,11 @@ background-position-y: -10px;
   color: white;
   transition: 0.4s;
    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
-}
+} */
 
-.regBTN:active{
+/* .regBTN:active{
   background-color: rgb(117, 142, 234);
-}
+} */
 
 .sectionRegistration{
   border-radius: 10px;
@@ -1486,8 +1599,8 @@ background-position-y: -10px;
 }
 
 .iconsContainer span{
-  width: 50%;
-  font-size: 1rem;
+  width: 80%;
+  font-size: 2rem;
    
 }
 

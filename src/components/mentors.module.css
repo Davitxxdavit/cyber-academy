@@ -1,3 +1,23 @@
+.aboutUs hr{
+  width: 80%;
+  color: rgba(0, 255, 255, 0.692);
+  border: 1px solid rgba(0, 255, 255, 0.692);
+  margin: 0;
+  padding: 0;
+  display: none;
+  box-shadow: 0px 10px 20px rgba(0, 255, 255, 0.692);
+}
+.aboutUs:hover > hr{
+  display: block;
+}
+
+.aboutUs hr:last-child{
+  margin-bottom: 10px;
+}
+
+
+
+
 .mobileAboutUs{
   color: #818181;
   overflow-wrap: anywhere;
@@ -54,6 +74,32 @@
         height: fit-content;
         z-index: 9999;
     }
+
+    
+    .linkDisplay:hover{
+
+  animation: scaleUp 1s ease-in-out infinite;
+
+      background-color: #00f2fe;
+      color: black;
+      text-shadow: 10px 10px 20px  #00f2fe;
+      /* color: rgba(2, 68, 68, 0.984); */
+      box-shadow: 10px 10px 10px #00f2fe,
+                  -10px 10px 10px #00f2fe,
+                  10px -10px 10px #00f2fe,
+                  -10px -10px 10px #00f2fe ;
+    }
+
+    @keyframes scaleUp {
+      from{
+        scale: 1;
+      }
+
+      to{
+        scale: 1.02;
+      }
+    }
+
 
 
 

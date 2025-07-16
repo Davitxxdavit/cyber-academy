@@ -21,6 +21,7 @@ import Finance from './components/Finance';
 import MicrosoftSuite from './components/MicrosoftSuite';
 import GoogleWorkspace from './components/GoogleWorkspace';
 import Managment from './components/Managment';
+import AboutUs from './components/AboutUs';
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
           <Route path="/MicrosoftSuite" element={<MicrosoftSuite/>} />
           <Route path="/GoogleWorkspace" element={<GoogleWorkspace/>} />
           <Route path="/Managment" element={<Managment/>} />
+          <Route path="/AboutUs" element={<AboutUs/>} />
 
          
         </Routes>

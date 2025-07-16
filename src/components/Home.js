@@ -50,9 +50,9 @@ const CyberAcademy = () => {
     { id: 4, image: 'picer-container-swiper4', text: 'ალგორითმები', link: '/algo' },
     { id: 5, image: 'picer-container-swiper5', text: 'ფოტოგრაფია, ფოტოგრაფია მაკრეტინგში', link: '/photograph' },
     { id: 6, image: 'picer-container-swiper6', text: 'საოფისე პროგრამული უზრუნველყოფა', link: '/office' },
-    { id: 7, image: 'picer-container-swiper7', text: 'Microsoft Office Suite-ის გამოყენება', link: '/suite' },
-    { id: 8, image: 'picer-container-swiper8', text: 'Google Workspace-ის გამოყენება', link: '/office' },
-    { id: 9, image: 'picer-container-swiper9', text: 'პროექტის მართვის საბაზისო პრინციპები', link: '/office' },
+    { id: 7, image: 'picer-container-swiper7', text: 'Microsoft Office Suite-ის გამოყენება', link: '/MicrosoftSuite' },
+    { id: 8, image: 'picer-container-swiper8', text: 'Google Workspace-ის გამოყენება', link: '/GoogleWorkspace' },
+    { id: 9, image: 'picer-container-swiper9', text: 'პროექტის მართვის საბაზისო პრინციპები', link: '/Managment' },
   ];
 
   const gallery = [
@@ -306,14 +306,23 @@ const CyberAcademy = () => {
           {/* <Link to="/partners">
             <button className="glow-on-hover" type="button">ჩვენს შესახებ</button>
           </Link> */}
-            <div className=' about-uss'>
+            <div className='about-uss'>
                     <p >ჩვენს შესახებ</p>
+                    <hr/>
                     <Link className='link-display' to="/mission">მისია,ხედვა,ღირებულებები</Link>
+                    <hr/>
                     <Link className='link-display' to="/norms">მარეგურილებერი ნორმები</Link>
+                    <hr/>
                     <Link className='link-display' to="/quality">ხარისხის უზრუნველყოფა</Link>
+                    <hr/>
                     <Link className='link-display' to="/strategy">სტრატეგიული განვითარების გეგმა</Link>
+                    <hr/>
                     <Link className='link-display' to="/plan">სამოქმედო გეგმა</Link>
+                    <hr/>
                     <Link className='link-display' to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+                    <hr/>
+                    <Link className='link-display' to="/AboutUs">ჩვენს შესახებ</Link>
+                    <hr/>
                  </div>
           <Swiper
             className="mySwiper2"
@@ -392,6 +401,11 @@ const CyberAcademy = () => {
                               display: isClicked ? 'block' : 'none'
                             }
                            } className='link-display-mobile' to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+                            <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className='link-display-mobile' to="/AboutUs">ჩვენს შესახებ</Link>
         </div>
   </div>
 

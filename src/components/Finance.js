@@ -71,6 +71,11 @@ const Finance = () => {
                               display: isClicked ? 'block' : 'none'
                             }
                            } className={styles.linkDisplayMobile} to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+                            <Link style={
+                            {
+                              display: isClicked ? 'block' : 'none'
+                            }
+                           } className={styles.linkDisplayMobile} to="/AboutUs">ჩვენს შესახებ</Link>
         </div>
       </div>
       
@@ -96,13 +101,22 @@ const Finance = () => {
           <button className={styles.glowOnHover} type="button">გუნდი</button>
         </Link>
          <div className={styles.aboutUs}>
-                           <p >ჩვენს შესახებ</p>
+                          <p >ჩვენს შესახებ</p>
+                           <hr/>
                            <Link className={styles.linkDisplay} to="/mission">მისია,ხედვა,ღირებულებები</Link>
+                           <hr/>
                            <Link className={styles.linkDisplay} to="/norms">მარეგურილებერი ნორმები</Link>
+                           <hr/>
                            <Link className={styles.linkDisplay} to="/quality">ხარისხის უზრუნველყოფა</Link>
+                           <hr/>
                            <Link className={styles.linkDisplay} to="/strategy">სტრატეგიული განვითარების გეგმა</Link>
+                           <hr/>
                            <Link className={styles.linkDisplay} to="/plan">სამოქმედო გეგმა</Link>
+                           <hr/>
                            <Link className={styles.linkDisplay} to="/finance">ფინანსური საქმიანობის შესახებ</Link>
+                           <hr/>
+                           <Link className={styles.linkDisplay} to="/AboutUs">ჩვენს შესახებ</Link>
+                           <hr/>
                         </div>
       </div>
 

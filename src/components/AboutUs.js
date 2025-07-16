@@ -2,41 +2,39 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../components/AboutUs.module.css';
-
-const Quality = () => {
+import image from '../asets/course-3.jpg';
+const AboutUs = () => {
     const [miniSidebar, setMiniSidebar] = useState(false);
-              const [micVisible, setMicVisible] = useState(true);
-              const [sidebarOpen, setSidebarOpen] = useState(false);
-              const [isClicked, setIsClicked] = useState(false);
-            
-              const clickAboutUs = () => {
-                return setIsClicked(!isClicked);
-              }
-            
-              const handleMouseEnter = () => {
-                setMiniSidebar(true);
-                setMicVisible(false); 
-              };
-            
-              const handleMouseLeave = () => {
-                setTimeout(() => {
-                  setMiniSidebar(false);
-                  setMicVisible(true);
-                }, 300);
-              };
-            
-              const openNav = () => {
-                setSidebarOpen(true);
-              };
-            
-              const closeNav = () => {
-                setSidebarOpen(false);
-              };
+                          const [micVisible, setMicVisible] = useState(true);
+                          const [sidebarOpen, setSidebarOpen] = useState(false);
+                          const [isClicked, setIsClicked] = useState(false);
+                        
+                          const clickAboutUs = () => {
+                            return setIsClicked(!isClicked);
+                          }
+                        
+                          const handleMouseEnter = () => {
+                            setMiniSidebar(true);
+                            setMicVisible(false); 
+                          };
+                        
+                          const handleMouseLeave = () => {
+                            setTimeout(() => {
+                              setMiniSidebar(false);
+                              setMicVisible(true);
+                            }, 300);
+                          };
+                        
+                          const openNav = () => {
+                            setSidebarOpen(true);
+                          };
+                        
+                          const closeNav = () => {
+                            setSidebarOpen(false);
+                          };
   return (
     <div>
-
-     
-         <div id="mySidebar2" className={styles.sidebar2} style={{ width: sidebarOpen ? '250px' : '0' }}>
+      <div id="mySidebar2" className={styles.sidebar2} style={{ width: sidebarOpen ? '250px' : '0' }}>
         <button className={styles.closebtn} onClick={closeNav}>☰</button>
         <Link to="/">მთავარი</Link>
         <Link to="/gallery">კარიერა</Link>
@@ -206,15 +204,43 @@ const Quality = () => {
         style={{
           marginLeft: miniSidebar ? "430px" : "90px",
           transition: "margin-left 0.5s ease-in-out",
+          display: miniSidebar ? "block" : "none",
         }}
+        className={styles.aaa}
       ></div>
 
-        <div className={styles.mainCon}>
-        <h1>ხარისხის უზრუნველყოფა</h1>
-        </div>
-        
+    <div className={styles.mainCon}>
+    <div className={styles.mainConWrapper}>
+    <div className={styles.backAboutUS}>
+      <div className={styles.backAboutUSItem1}></div>
+      <div className={styles.backAboutUSItem2}></div>
+      <div className={styles.backAboutUSItem3}></div>
+    </div>
+    <h1 className={styles.aboutUsHeading}>ჩვენს შესახებ</h1>
+    <div className={styles.backAboutUSContent}>მოკლე აღწერა</div>
+    <div className={styles.backAboutUSMap}>
+       <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d312.29081238841826!2d41.612592077053016!3d41.63182261629536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406787a6b8a7e515%3A0xf66f06747969ee30!2sLLC%20Cyber%20Solutions!5e0!3m2!1sru!2sge!4v1706012975837!5m2!1sru!2sge" 
+                  allowFullScreen="" 
+                  loading="fast" 
+                  referrerPolicy="no-referrer-when-downgrade" 
+                  id="maper"
+                  className={styles.map}
+                ></iframe>
+
+                <div className={styles.mapContent}>
+                  <address>ბათუმი, აღმაშენებლის 2</address>
+                  <p>INFO@ACADEMY.EDU.GE</p>
+                  <a href="tel:+995577427000">
+                   +995 577 427 000
+                   </a>
+                </div>
+    </div>
+    </div>
+    </div>
+
     </div>
   )
 }
 
-export default Quality
+export default AboutUs
