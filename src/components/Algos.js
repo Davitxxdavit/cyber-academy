@@ -241,14 +241,14 @@ const [isClicked, setIsClicked] = useState(false);
               <img alt='#' className={styles.calendarImg} src={calendar} />
               <span>ხანგრძლივობა</span>
             </div>
-            <span className={styles.spanN}>3 თვე</span>
+            <span className={styles.spanN}>9 თვე</span>
           </div>
           <div className={styles.sectionRegistrationInner}>
            <div className={styles.iconsContainer}>
               <img alt='#' src={lari} />
               <span>ფასი</span>
            </div>
-           <span className={styles.spanN}>750ლ</span>
+           <span className={styles.spanN}>2700ლ</span>
           </div>
           <div>
           

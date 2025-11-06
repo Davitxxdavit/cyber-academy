@@ -1148,7 +1148,12 @@ body {
   
   @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
   
-  
+  .picer-container-swiper10{
+    background-image: url('../asets/3ddesign.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   
   
   .mic {
@@ -2320,6 +2325,18 @@ body {
       }
       .picer-container-swiper2{
       background-image: url(../asets/course-2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      }
+
+         .picer-container-swiper10{
+      background-image: url(../asets/3ddesign.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;

@@ -10,6 +10,8 @@ import course6Image from '../asets/course-img2.jpeg';
 import course7Image from '../asets/microsoftsuite.webp';
 import course8Image from '../asets/google-workspace.jpg';
 import course9Image from '../asets/managment.jpg';
+import course10Image from '../asets/3ddesign.jpg';
+
 const AcademyPage = () => {
   const [miniSidebar, setMiniSidebar] = useState(false);
   const [micVisible, setMicVisible] = useState(true);
@@ -233,8 +235,8 @@ const [isClicked, setIsClicked] = useState(false);
           <Link to="/graphics">
             <div className={styles.box}>
               <span>
-                <div className={styles.d1}>3 თვე</div>
-                <div className={styles.d2}>750 ლ.</div>
+                <div className={styles.d1}>9 თვე</div>
+                <div className={styles.d2}>2700 ლ.</div>
               </span>
               <div className={styles.content}>
                 <img src={course2Image} alt="გრაფიკული დიზაინი" />
@@ -247,8 +249,8 @@ const [isClicked, setIsClicked] = useState(false);
           <Link to="/It">
             <div className={styles.box}>
               <span>
-                <div className={styles.d1}>3 თვე</div>
-                <div className={styles.d2}>750 ლ.</div>
+                <div className={styles.d1}>9 თვე</div>
+                <div className={styles.d2}>2700 ლ.</div>
               </span>
               <div className={styles.content}>
                 <img src={course1Image} alt="IT სპეციალისტი" />
@@ -261,8 +263,8 @@ const [isClicked, setIsClicked] = useState(false);
           <Link to="/WebTech">
             <div className={styles.box}>
               <span>
-                <div className={styles.d1}>3 თვე</div>
-                <div className={styles.d2}>750 ლ.</div>
+                <div className={styles.d1}>9 თვე</div>
+                <div className={styles.d2}>2700 ლ.</div>
               </span>
               <div className={styles.content}>
                 <img src={course3Image} alt="ვებ ტექნოლოგიები" />
@@ -275,8 +277,8 @@ const [isClicked, setIsClicked] = useState(false);
           <Link to="/algos">
             <div className={styles.box}>
               <span>
-                <div className={styles.d1}>3 თვე</div>
-                <div className={styles.d2}>750 ლ.</div>
+                <div className={styles.d1}>9 თვე</div>
+                <div className={styles.d2}>2700 ლ.</div>
               </span>
               <div className={styles.content}>
                 <img src={course4Image} alt="პროგრამირების საფუძვლები" />
@@ -286,7 +288,21 @@ const [isClicked, setIsClicked] = useState(false);
             </div>
           </Link>
 
-          <Link to="/office">
+           <Link to="/ThreeDDesign">
+            <div className={styles.box}>
+              <span>
+                <div className={styles.d1}>3 თვე</div>
+                <div className={styles.d2}>1200 ლ.</div>
+              </span>
+              <div className={styles.content}>
+                <img src={course10Image} alt="3D Design and Modeling" />
+                <h2>3D Design and Modeling</h2>
+                <p>3D მოდელირება და დიზაინი</p>
+              </div>
+            </div>
+          </Link>
+
+          {/* <Link to="/office">
             <div className={styles.box}>
               <span>
                 <div className={styles.d1}>3 თვე</div>
@@ -298,9 +314,9 @@ const [isClicked, setIsClicked] = useState(false);
                 <p>Microsoft Word, Microsoft Excell, Microsoft PowerPoint, ინტერნეტ პროგრამები</p>
               </div>
             </div>
-          </Link>
+          </Link> */}
 
-          <Link to="/Photograph">
+          {/* <Link to="/Photograph">
             <div className={styles.box}>
               <span>
                 <div className={styles.d1}>3 თვე</div>
@@ -312,9 +328,9 @@ const [isClicked, setIsClicked] = useState(false);
                 <p>ფოტოგრაფიის აპარატურა და მისი შერჩევის თავისებურებები</p>
               </div>
             </div>
-          </Link>
+          </Link> */}
 
-          <Link to="/MicrosoftSuite">
+          {/* <Link to="/MicrosoftSuite">
             <div className={styles.box}>
               <span>
                 <div className={styles.d1}>3 თვე</div>
@@ -326,9 +342,9 @@ const [isClicked, setIsClicked] = useState(false);
                 <p>Microsoft Office Suite-ის გამოყენება(Word, Exel, Pdf, PowerPoint-ის უნქციები; ელექტრონული ხელმოწერა და შტამპი)</p>
               </div>
             </div>
-          </Link>
+          </Link> */}
 
-          <Link to="/GoogleWorkspace">
+          {/* <Link to="/GoogleWorkspace">
             <div className={styles.box}>
               <span>
                 <div className={styles.d1}>3 თვე</div>
@@ -340,9 +356,9 @@ const [isClicked, setIsClicked] = useState(false);
                 <p>Google Wordkspace-ის ინსტრუმენტების გამოყენება(Google Drive, Docs, sheets, Slides და Google Calendar-ის ეფექტური გამოყენება)</p>
               </div>
             </div>
-          </Link>
+          </Link> */}
 
-          <Link to="/Managment">
+          {/* <Link to="/Managment">
             <div className={styles.box}>
               <span>
                 <div className={styles.d1}>3 თვე</div>
@@ -354,7 +370,7 @@ const [isClicked, setIsClicked] = useState(false);
                 <p>პროექტის დაგეგმვა და განხორციელება; პროექტის მონიტორინგი და შეფასება; პროექტების მართვის ინფორმაციული სისტემები</p>
               </div>
             </div>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

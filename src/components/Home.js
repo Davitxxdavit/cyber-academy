@@ -48,11 +48,12 @@ const CyberAcademy = () => {
     { id: 2, image: 'picer-container-swiper2', text: 'გრაფიკული დიზაინი', link: '/Graphics' },
     { id: 3, image: 'picer-container-swiper3', text: 'ვებ ტექნოლოგიები', link: '/webTech' },
     { id: 4, image: 'picer-container-swiper4', text: 'ალგორითმები', link: '/algo' },
-    { id: 5, image: 'picer-container-swiper5', text: 'ფოტოგრაფია, ფოტოგრაფია მაკრეტინგში', link: '/photograph' },
-    { id: 6, image: 'picer-container-swiper6', text: 'საოფისე პროგრამული უზრუნველყოფა', link: '/office' },
-    { id: 7, image: 'picer-container-swiper7', text: 'Microsoft Office Suite-ის გამოყენება', link: '/MicrosoftSuite' },
-    { id: 8, image: 'picer-container-swiper8', text: 'Google Workspace-ის გამოყენება', link: '/GoogleWorkspace' },
-    { id: 9, image: 'picer-container-swiper9', text: 'პროექტის მართვის საბაზისო პრინციპები', link: '/Managment' },
+    // { id: 5, image: 'picer-container-swiper5', text: 'ფოტოგრაფია, ფოტოგრაფია მაკრეტინგში', link: '/photograph' },
+    // { id: 6, image: 'picer-container-swiper6', text: 'საოფისე პროგრამული უზრუნველყოფა', link: '/office' },
+    // { id: 7, image: 'picer-container-swiper7', text: 'Microsoft Office Suite-ის გამოყენება', link: '/MicrosoftSuite' },
+    // { id: 8, image: 'picer-container-swiper8', text: 'Google Workspace-ის გამოყენება', link: '/GoogleWorkspace' },
+    // { id: 9, image: 'picer-container-swiper9', text: 'პროექტის მართვის საბაზისო პრინციპები', link: '/Managment' },
+    {id:10, image: 'picer-container-swiper10', text: '3D დიზაინი და მოდელირება', link: '/ThreeDDesign' },
   ];
 
   const gallery = [

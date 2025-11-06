@@ -22,6 +22,7 @@ import MicrosoftSuite from './components/MicrosoftSuite';
 import GoogleWorkspace from './components/GoogleWorkspace';
 import Managment from './components/Managment';
 import AboutUs from './components/AboutUs';
+import ThreeDDesign from './components/ThreeDDesign';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/Robotech" element={<Robo />} />
           <Route path="/It" element={<IT />} />
           <Route path="/Algos" element={<Algos />} />
+          <Route path='/ThreeDDesign' element={<ThreeDDesign/>} />
           <Route path="/Office" element={<Office />} />
           <Route path="/Photograph" element={<Photo />} />
           <Route path="/Mission" element={<Mission/>} />

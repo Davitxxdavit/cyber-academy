@@ -10,7 +10,7 @@ import calendar from '../asets/calendar.png';
 import rightArrow from '../asets/right-arrow-svgrepo-com.svg';
 import up from '../asets/up.svg';
 import down from '../asets/down.svg';
-import mentor from '../asets/mentors2.jpeg';
+import mentor from '../asets/mentordiana.jpg';
 
 
 
@@ -243,14 +243,14 @@ const [isClicked, setIsClicked] = useState(false);
               <img alt='#' className={styles.calendarImg} src={calendar} />
               <span>ხანგრძლივობა</span>
             </div>
-            <span className={styles.spanN}>3 თვე</span>
+            <span className={styles.spanN}>9 თვე</span>
           </div>
           <div className={styles.sectionRegistrationInner}>
            <div className={styles.iconsContainer}>
               <img alt='#' src={lari} />
               <span>ფასი</span>
            </div>
-           <span className={styles.spanN}>750ლ</span>
+           <span className={styles.spanN}>2700ლ</span>
           </div>
           <div>
             <motion.button 
@@ -265,9 +265,14 @@ const [isClicked, setIsClicked] = useState(false);
         <div className={styles.secondSection}>
           <div className={styles.mentor}>
             <h2>მენტორი</h2>
-            <img alt='#' src={mentor} />
-            <span>მიხეილ დონაძე</span>
-            <p>ვებ დეველოპერი</p>
+            <img alt='#' src={mentor} style={{
+              width: '200px',
+              height: '200px',
+              objectFit: 'cover',
+              borderRadius: '50%'
+            }} />
+            <span>დიანა ანანიძე</span>
+            <p>გრაფიკული დიზაინერი</p>
           </div>
           <div className={styles.syllabusContainer}>
             <h2 className={styles.syllabusH2}>სილაბუსი</h2>

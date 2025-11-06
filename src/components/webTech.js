@@ -7,7 +7,7 @@ import syllabusPdf from "../asets/silabus-web.docx"; // Make sure you have this 
 import lari from '../asets/lari.png';
 import up from '../asets/up.svg';
 import down from '../asets/down.svg';
-import kaxi from '../asets/kaxi.jpg';
+import davit from '../asets/davit.jpeg';
 import { motion } from 'motion/react';
 import rightArrow from '../asets/right-arrow-svgrepo-com.svg';
 import courseImage from '../asets/course-3.jpg';
@@ -228,14 +228,14 @@ function App() {
               <img alt='#' className={styles.calendarImg} src={calendar} />
               <span>ხანგრძლივობა</span>
             </div>
-            <span className={styles.spanN}>3 თვე</span>
+            <span className={styles.spanN}>9 თვე</span>
           </div>
           <div className={styles.sectionRegistrationInner}>
            <div className={styles.iconsContainer}>
               <img alt='#' src={lari} />
               <span>ფასი</span>
            </div>
-           <span className={styles.spanN}>750ლ</span>
+           <span className={styles.spanN}>2700 ლ</span>
           </div>
           <div>
           
@@ -251,8 +251,8 @@ function App() {
         <div className={styles.secondSection}>
           <div className={styles.mentor}>
             <h2>მენტორი</h2>
-            <img alt='#' src={kaxi} />
-            <span>კახი კახიძე</span>
+            <img alt='#' src={davit} />
+            <span>დავით ბერიძე</span>
             <p>ვებ დეველოპერი</p>
           </div>
           <div className={styles.syllabusContainer}>
