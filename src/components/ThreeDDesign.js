@@ -29,6 +29,54 @@ function ThreeDDesign() {
   const [arrowDown10, setArrowDown10] = useState(false);
   const [arrowDown11, setArrowDown11] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [videoModalOpen, setVideoModalOpen] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+  // YouTube video data
+  const videoGallery = [
+    {
+      id: 1,
+      title: "3D Design Introduction",
+      youtubeId: "obWzpkmZRxc", // Replace with actual YouTube video ID
+      thumbnail: `https://img.youtube.com/vi/obWzpkmZRxc/maxresdefault.jpg`
+    },
+    {
+      id: 2,
+      title: "CLO Software Basics",
+      youtubeId: "zP56qXfx5No", // Replace with actual YouTube video ID
+      thumbnail: `https://img.youtube.com/vi/zP56qXfx5No/maxresdefault.jpg`
+    },
+    {
+      id: 3,
+      title: "Fashion Design Techniques",
+      youtubeId: "cYjjBlObTvs", // Replace with actual YouTube video ID
+      thumbnail: `https://img.youtube.com/vi/cYjjBlObTvs/maxresdefault.jpg`
+    },
+    {
+      id: 4,
+      title: "3D Modeling Process",
+      youtubeId: "dQkqX1ldfIc", // Replace with actual YouTube video ID
+      thumbnail: `https://img.youtube.com/vi/dQkqX1ldfIc/maxresdefault.jpg`
+    },
+    {
+      id: 5,
+      title: "3D Design Tutorial",
+      youtubeId: "59bmRGwcTL4",
+      thumbnail: `https://img.youtube.com/vi/59bmRGwcTL4/maxresdefault.jpg`
+    },
+    {
+      id: 6,
+      title: "Advanced CLO Techniques",
+      youtubeId: "onBjBVMQCEQ",
+      thumbnail: `https://img.youtube.com/vi/onBjBVMQCEQ/maxresdefault.jpg`
+    },
+    {
+      id: 7,
+      title: "3D Fashion Design",
+      youtubeId: "h7eNHSRufeQ",
+      thumbnail: `https://img.youtube.com/vi/h7eNHSRufeQ/maxresdefault.jpg`
+    }
+  ];
   
     const clickAboutUs = () => {
       return setIsClicked(!isClicked);
@@ -81,9 +129,16 @@ function ThreeDDesign() {
     setArrowDown10(!arrowDown10);
   }
 
-  const collapse11 = () => {
-    setArrowDown11(!arrowDown11);
-  }
+ 
+  const openVideoModal = (video) => {
+    setSelectedVideo(video);
+    setVideoModalOpen(true);
+  };
+
+  const closeVideoModal = () => {
+    setVideoModalOpen(false);
+    setSelectedVideo(null);
+  };
 
   const handleMouseEnter = () => {
     setMiniSidebar(true);
@@ -292,6 +347,52 @@ function ThreeDDesign() {
             onClick={handleRegistration}
             className={styles.regBTN}>რეგისტრაცია</motion.button>
           </div>
+        </div>
+
+        {/* Video Gallery Section */}
+        <div className={styles.videoGallerySection}>
+          <h2 className={styles.videoGalleryTitle}>კურსის ვიდეო მასალები</h2>
+          <div className={styles.videoGalleryGrid}>
+            {videoGallery.map((video) => (
+              <div 
+                key={video.id} 
+                className={styles.videoThumbnail}
+                onClick={() => openVideoModal(video)}
+              >
+                <img 
+                  src={video.thumbnail} 
+                  alt={video.title}
+                  className={styles.thumbnailImage}
+                />
+                <div className={styles.playButton}>
+                  <svg width="60" height="60" viewBox="0 0 24 24" fill="white">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <div className={styles.videoTitle}>{video.title}</div>
+              </div>
+            ))}
+          </div>
+
+        {/* Video Modal */}
+        {videoModalOpen && (
+          <div className={styles.videoModal} onClick={closeVideoModal}>
+            <div className={styles.videoModalContent} onClick={(e) => e.stopPropagation()}>
+              <button className={styles.closeButton} onClick={closeVideoModal}>×</button>
+              <iframe
+                width="800"
+                height="450"
+                src={`https://www.youtube.com/embed/${selectedVideo?.youtubeId}?autoplay=1&mute=1&controls=0`}
+                title={selectedVideo?.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+              <h3 className={styles.modalVideoTitle}>{selectedVideo?.title}</h3>
+            </div>
+          </div>
+        )}
+
         </div>
 
 

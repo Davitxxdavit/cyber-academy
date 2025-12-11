@@ -292,7 +292,7 @@ const MentorsPage = () => {
                           <div className={styles.contentMentors}>
                             <div className={styles.headerConntainer3}>კახი კახიძე</div>
                             <div className={styles.texterContainer3_1}>
-                              აკადემიის მასწავლებელი
+                              სტაჟირების პროგრამის მენეჯერი
                             </div>
                             <div className={styles.bigTexterContainer3}>
                               კომპიუტერულ მეცნიერებათა მაგისტრი, ბათუმის სახელმწიფო უნივერსიტეტის მოწვეული მასწავლებელი, WEB დეველოპერი
@@ -315,12 +315,37 @@ const MentorsPage = () => {
                                 <div className={styles.picerMentors3}></div>
                               </div>
                               <div className={styles.contentMentors}>
-                                <div className={styles.headerConntainer3}>გიორგი კალანდაძე</div>
+                                <div className={styles.headerConntainer3}>სოფიო დუმბაძე</div>
                                 <div className={styles.texterContainer3_1}>
                                   აკადემიის მასწავლებელი
                                 </div>
                                 <div className={styles.bigTexterContainer3}>
-                                  კომპიუტერულ მეცნიერებათა ბაკალავრი ფოტოგრაფი, მარკეტინგის სპეციალისტი
+                                 
+                                </div>
+                              </div>
+                            </div>
+                      
+                </motion.div>
+
+                <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                              duration: 0.4,
+                              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                        }}
+                        className={styles.founder2}>
+                         <div className={styles.mentorsBox}>
+                              <div className={styles.fixPicerContainer3}>
+                                <div className={styles.picerMentors6}></div>
+                              </div>
+                              <div className={styles.contentMentors}>
+                                <div className={styles.headerConntainer3}>სოფია სურმანიძე</div>
+                                <div className={styles.texterContainer3_1}>
+                                  მოდის დიზაინის მენეჯერი
+                                </div>
+                                <div className={styles.bigTexterContainer3}>
+                                 
                                 </div>
                               </div>
                             </div>
@@ -340,16 +365,15 @@ const MentorsPage = () => {
                             <div className={styles.picerMentors4}></div>
                           </div>
                           <div className={styles.contentMentors}>
-                            <div className={styles.headerConntainer3}>Lorem ipsum</div>
+                            <div className={styles.headerConntainer3}>დავით ბერიძე</div>
                             <div className={styles.texterContainer3_1}>
-                              Experience - Lorem ipsum dolor sit amet
+                              აკადემიის მასწავლებელი
                             </div>
                             <div className={styles.texterContainer3_2}>
-                              Experience - Lorem ipsum dolor sit amet
+                             
                             </div>
                             <div className={styles.bigTexterContainer3}>
-                              Lorem ipsum dolor sit amet consectetur adipisicing elittttt.
-                              Aliquam, saepe accusadolor dolor dolordolor
+                              
                             </div>
                           </div>
                         </div>
@@ -369,12 +393,12 @@ const MentorsPage = () => {
                                     <div className={styles.picerMentors5}></div>
                                   </div>
                                   <div className={styles.contentMentors}>
-                                    <div className={styles.headerConntainer3}>მიხეილ დონაძე</div>
+                                    <div className={styles.headerConntainer3}>დიანა ანანიძე</div>
                                     <div className={styles.texterContainer3_1}>
-                                      აკადემიის დირექტორი
+                                      აკადემიის მასწავლებელი
                                     </div>
                                     <div className={styles.bigTexterContainer3}>
-                                      კომპიუტერულ მეცნიერებათა დოქტორი ბათუმის სახელმწიფო უნივერსიტეტის ასოცირებული პროფესორი
+                                      
                                     </div>
                                   </div>
                              </div>
